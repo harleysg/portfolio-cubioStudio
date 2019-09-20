@@ -26,6 +26,9 @@
         font-size: 1.6rem;
         transform: rotate(-90deg);
         transform-origin: bottom right;
+        background-color: var(--color-a);
+        color: var(--color_1);
+        padding: 0 10px;
     }
     &:after {
         content: attr(data-product) ' / ' attr(data-product-count);
