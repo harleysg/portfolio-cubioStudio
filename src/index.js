@@ -103,7 +103,7 @@ class WheelEnd {
     }
 }
 /* ---------------------------------- */
-const maskEffectOnBesknate = new MaskEffect('#besknate', '.product');
+const maskEffectOnBesknate = new MaskEffect('#betsknate', '.product');
 const maskEffectOnOrca = new MaskEffect('#orca', '.product');
 /* ---------------------------------- */
 class AddEvent {
@@ -124,7 +124,7 @@ class AddEvent {
     }
 }
 /* ---------------------------------- */
-besknate.addEventListener('click', (e) => maskEffectOnBesknate.changeProduct());
+betsknate.addEventListener('click', (e) => maskEffectOnBesknate.changeProduct());
 orca.addEventListener('click', (e) => maskEffectOnOrca.changeProduct());
 document.addEventListener('mousemove', onMousePosition);
 document.addEventListener('touchmove', onMousePosition);

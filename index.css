@@ -71,6 +71,8 @@ img { max-width: 100%; }
 
 .c-founders_this-caption--title { margin: 0; }
 
+.c-contact { display: -ms-grid; display: grid; grid-gap: 0.5em; }
+
 /* ---------------------------------- */
 .svg-main_title .cls-1 { fill: none; }
 
