@@ -1,10 +1,12 @@
 .mouse-tracker {
+    --size-init: 1rem;
+    --size-active: 2rem;
     position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: var(--size-init);
+    height: var(--size-init);
     background: rgba(255, 255, 255, 0.2);
     border-radius: 0%;
     opacity: 0.8;
@@ -42,8 +44,8 @@
     }
 
     &.on-link {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: var(--size-active);
+        height: var(--size-active);
         cursor: pointer;
         background-image: linear-gradient(460deg, var(--color-a), var(--color-b));
         &::before {

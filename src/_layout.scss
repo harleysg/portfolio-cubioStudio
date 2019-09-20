@@ -20,11 +20,13 @@
         padding: 1rem 4vw;
     }
     &logo {
-        min-width: 4rem;
+        max-width: 4rem;
+        width: 100%;
     }
     &menu {
         opacity: 0;
-        min-width: 3rem;
+        max-width: 3rem;
+        width: 100%;
     }
     &logo,
     &menu {
