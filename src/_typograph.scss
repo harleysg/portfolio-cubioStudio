@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+/* latin-ext */
+@font-face {
+    font-family: 'AvenirNext-Bold';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: local('AvenirNext-Bold'), local('AvenirNext-Bold'), url('./fonts/AvenirNext-Bold-01.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AvenirNext-Medium';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: local('AvenirNext-Medium'), local('AvenirNext-Medium'), url('./fonts/AvenirNext-Medium-06.ttf') format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Avenir Next';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Avenir Next'), local('Avenir Next'), url('./fonts/AvenirNext-Regular-08.ttf') format('truetype');
+}

@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+.svg-main_title {
+    .cls-1 {
+        fill: none;
+    }
+    .cls-2 {
+        fill: #242424;
+    }
+    .cls-3 {
+        font-size: 131px;
+        font-family: var(--font-avenirnext-bold);
+        @include fontBold();
+        font-weight: 700;
+        letter-spacing: -0.03em;
+    }
+    .cls-3,
+    .cls-6 {
+        fill: #383838;
+    }
+    .cls-4 {
+        letter-spacing: -0.04em;
+    }
+    .cls-5 {
+        letter-spacing: -0.03em;
+    }
+    .cls-6 {
+        font-size: 34px;
+        font-family: var(--font-avenirnext-medium);
+        @include fontBold();
+        font-weight: 500;
+        letter-spacing: -0.04em;
+    }
+    .cls-7 {
+        letter-spacing: -0.03em;
+    }
+    .cls-8 {
+        letter-spacing: -0.06em;
+    }
+    .cls-9 {
+        letter-spacing: -0.05em;
+    }
+    .cls-10 {
+        letter-spacing: -0.03em;
+    }
+    .cls-11 {
+        letter-spacing: -0.05em;
+    }
+    .cls-12 {
+        letter-spacing: -0.09em;
+    }
+}
+
+.svg-menu {
+    & .cls-1 {
+        fill: #383838;
+    }
+}
+
+.svg-logo .st0 {
+    fill: #222220;
+}
+
+.svg-mensaje {
+    .cls-1,
+    .cls-5 {
+        font-size: 116px;
+        font-family: var(--font-avenirnext-bold), roboto;
+        @include fontBold();
+        font-weight: 700;
+        letter-spacing: -0.03em;
+    }
+    .cls-1 {
+        fill: #fff;
+    }
+    .cls-2 {
+        letter-spacing: -0.05em;
+    }
+    .cls-3 {
+        letter-spacing: -0.03em;
+    }
+    .cls-4 {
+        letter-spacing: -0.06em;
+    }
+    .cls-5 {
+        fill: #eec32e;
+    }
+}

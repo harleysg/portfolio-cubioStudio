@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+.o- {
+    &main {
+        width: 100%;
+        height: 100%;
+    }
+    &section {
+        width: 100%;
+        height: 100vh;
+        &.u-extra {
+            height: 130vh;
+        }
+    }
+    &header {
+        display: flex;
+        min-height: 3rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 4vw;
+    }
+    &logo {
+        min-width: 4rem;
+    }
+    &menu {
+        opacity: 0;
+        min-width: 3rem;
+    }
+    &logo,
+    &menu {
+        min-height: 3rem;
+        border: none;
+        background-color: transparent;
+    }
+    &article {
+        padding: 2vh 4vw;
+    }
+    &wrapper {
+        max-width: 1100px;
+        margin: auto;
+    }
+}
+.u- {
+    &head_section,
+    &headding,
+    &message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &head_section {
+        font-size: 7.89rem;
+        margin: 1vh 0 3vh;
+        font-family: var(--font-avenirnext-bold), Helvetica;
+        font-weight: bold;
+        color: var(--color-a);
+        transition: text-shadow 0.3s ease-in-out, color 0.35s ease-in-out;
+        &::before {
+            content: attr(data-name);
+            width: 200%;
+            left: -50%;
+            position: absolute;
+            filter: opacity(0.2);
+            opacity: 0.3;
+            font-size: 200%;
+            color: rgba(74, 74, 74, 0.72);
+            z-index: -1;
+        }
+        &:hover {
+            text-shadow: 0 3px 0 var(--color-1);
+            &::before {
+                text-shadow: none;
+            }
+        }
+    }
+    &message {
+        background-color: #1c1e1f;
+        color: var(--color-0);
+    }
+    &middle {
+        height: 20rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+.c- {
+    &main-title,
+    &main-message {
+        width: 90vw;
+        max-width: 1100px;
+        user-select: none;
+        padding: 2vw;
+    }
+    &aboutUs {
+    }
+}

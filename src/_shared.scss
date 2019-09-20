@@ -1,0 +1,10 @@
+@charset "utf-8";
+@mixin parent($child) {
+    @at-root #{selector-unify(&, $child)} {
+        @content;
+    }
+}
+
+@mixin fontBold() {
+    // font-weight: bold;
+}
