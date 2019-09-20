@@ -1,122 +1,183 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Circular Mask Transition with CSS | 💺🔴 Chair Circle | @keyframers 2.2.0</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+   <meta charset="UTF-8" />
+   <title>CubioStudio</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+   <link rel="stylesheet" href="./index.css" />
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<!--a href="https://youtu.be/PDSWq6WaJMk" target="_blank" data-keyframers-credit style="color: #000"></a-->
-<!--script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script-->
+   <main id="app" class="o-main">
+      <header class="o-header">
+         <button class="o-logo js-logo">
+            <svg version="1.1" id="svg-logo" class="svg-logo" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 57.2 52.7"
+               style="enable-background:new 0 0 57.2 52.7;" xml:space="preserve">
+               <title>logo</title>
+               <g id="Capa_3">
+                  <g>
+                     <path class="st0"
+                        d="M6.2,50.6H55V6.2H6.2V50.6z M30.6,20l0.3-2.4v-0.1c1.1,0,1.8,0.3,1.6,1.4l0,0C32.2,20,31.9,20.2,30.6,20 C30.6,20,30.6,20,30.6,20z M48.2,34.2c0,0.3,0,0.5,0,0.8v0.3c0,0.5-0.1,4.1-0.1,4.6c0,0.8-0.5,1.2-1.3,1.2h-0.3h-0.1 c0-0.1,0-0.1,0-0.2c0-0.7,0-1.5,0-2.2c0-0.5,0-1,0-1.5v-3.4c0,0,0-0.1,0.1-0.1c0.2-0.1,0.5-0.1,0.8-0.1 C48,33.3,48.1,33.6,48.2,34.2z M32.6,23.3c0.2,1.1,0,1.8-1.4,2h-0.1l-0.1-0.1l-0.2-1c0-0.3-0.1-0.6-0.2-0.9c0-0.1,0-0.4,0-0.4 s-0.1-0.7-0.1-0.8c0.5-0.1,0.9,0,1.4,0.2C32.4,22.5,32.6,22.9,32.6,23.3z M42.8,19.8l-0.1,4.4c0,0.6-0.1,1.2-0.8,1.2 c-1.1,0-0.8-1.4-0.8-1.6c0-1.5-0.1-3-0.1-4.4v-0.4c0,0,0-0.5,0.1-0.6s0.2-0.4,0.4-0.4H42C42.8,17.9,42.9,19,42.8,19.8z M19.1,23.9 c0,0.8-0.1,1.5-0.3,2.3c0,0.1,0,0.1,0,0.2c-0.4,0.7-1.2,2-2.4,2h-1.9c-1.1-0.1-2.1-0.9-2.4-2C12,25.9,12,25.5,11.9,25l0.1-7.2 c0,0,0-0.2,0-0.2c0.1-0.7,0.4-1.3,0.9-1.8c0.8-0.8,1.9-1.2,3-1c0.6,0,1.3,0.2,1.8,0.5c0.8,0.6,1.3,1.5,1.2,2.5 c0,0.5-0.1,1-0.1,1.5c0,0-0.1,0.1-0.1,0.1l-2-0.1c-0.1,0-0.2-0.1-0.2-0.2s0.1-0.7,0.1-0.8c0,0,0-0.1,0-0.1c0-0.8-0.3-1.3-1.2-1.3 c-0.5,0-1.1,0.2-1.1,1.4v0.8c0,0.1,0,0.7,0,0.8v3.3c0,0.2-0.1,0.5-0.1,0.7c0,0.8,0.2,1.9,1.1,2.3h0.1h0.6l0.2-0.1 c0.5-0.3,0.4-1,0.4-1.4c0,0,0.1-0.2,0.1-0.2v-1c0-0.1,0-0.1-0.1-0.2l0,0c0-0.1,0.1-0.1,0.2-0.1h0.6h1.2H19l0.1,0.1 c0,0,0,0.4,0.1,0.5L19.1,23.9z M26.8,16.3c0,1.5,0,3-0.1,4.5c0,0.9-0.1,1.7-0.1,2.6c0,0,0,0.2,0,0.2s0,0.4,0,0.5 c-0.1,2-0.3,4-2.8,4.2h-0.5c-0.5,0-1-0.1-1.4-0.3c-0.3-0.1-0.5-0.3-0.7-0.5c-0.6-0.7-0.9-1.6-0.9-2.5c0,0,0-0.1,0-0.1 c0-0.4-0.1-2.4-0.1-2.8c0-0.1,0-1.1,0-1.5v-1.6c0-0.5,0.1-3.1,0.2-3.6c0-0.1,0-0.1,0.1-0.2c0-0.1,0.1-0.1,0.2-0.1h0.1h0.4 c0.5,0.1,1.1,0.1,1.6,0.1c0,0.1,0,0.2,0,0.2c0,1-0.2,1.9-0.2,2.9c0-0.4,0,2,0,5.7c0,0.1,0,0.7,0,0.7c0,0.4,0.1,1.1,0.6,1.2h0.4 c1.4,0,1.1-4.4,1.1-8.9c0-0.3-0.1-1.6-0.1-2v-0.1c0-0.1,0.2-0.1,0.3-0.1c0.6,0,1.2,0.1,1.8,0.1c0,0,0.1,0,0.1,0.1l0.1,0.9 L26.8,16.3z M35.7,25.3c-0.8,2.6-2.7,3-5.3,3c-0.5,0-1,0-1.5,0c-0.1,0-0.3,0-0.4,0h-0.1c0-0.2,0-1.1,0-1.3s0-1.3,0-1.5 s-0.1-1.3-0.1-1.4c0-0.1,0-0.2,0-0.3c0-0.2-0.1-2.2-0.1-2.5v0c0-1,0-2,0-2.9s-0.1-2.1,0-3.1c0,0-0.1-0.1-0.1-0.1 c0-0.2,0.3-0.2,0.4-0.2l0,0c6.2-0.8,8.7,1.9,5.4,6l0,0c1.3,0.9,2,2.3,2,3.8C35.9,24.9,35.8,25.1,35.7,25.3z M39,27.7 c0,0.1,0,0.4-0.2,0.5l-0.6,0.1h-0.1c-0.3,0-0.6-0.1-0.8-0.1s-0.5,0.1-0.6-0.1v-4.4c0-0.1-0.1-1-0.1-1.1c0-1,0-2.1-0.1-3.1v-3 c0-0.6-0.2-1.5,0.7-1.5h0.1c0.1,0,0.9,0.1,1.1,0.1c0.1,0,0.3,0,0.3,0.1c0,0.6-0.1,1.1-0.1,1.6c0,1.3,0.1,2.5,0.1,3.8 c0,0.5-0.1,1-0.1,1.5c0,1.2,0.1,2.5,0.1,3.7L39,27.7z M46.5,24.7c0,0.8-0.1,1.6-0.4,2.3c-0.5,0.9-1.5,1.4-2.6,1.4h-0.4l-1-0.1 c-0.9-0.4-1.6-1.3-1.8-2.3c0-0.2,0-1-0.1-1.2c0-0.1,0-0.2,0-0.2v-1c0-0.5,0-0.9,0-1.4c0-1.5,0-3.2,0.1-4.8 c0.2-0.8,0.4-1.8,1.3-2.2c0.6-0.2,1.2-0.4,1.8-0.4c0.5,0,0.9,0.1,1.4,0.2c0.2,0.1,0.5,0.2,0.7,0.3c0.1,0.1,0.1,0.1,0.2,0.2 c0.5,0.6,0.9,1.4,0.9,2.3c0.1,1.6,0.2,3.2,0.2,4.8C46.7,23.2,46.6,24,46.5,24.7L46.5,24.7z M16.8,41.5c-0.4,1.2-1.5,2.1-2.8,2.2 c-1.1,0.1-2.2-0.4-2.7-1.4c-0.3-0.7-0.5-1.4-0.4-2.2v-0.6c0-0.1,0.1-0.1,0.2-0.1c0.5,0,1.1-0.1,1.6-0.1l0,0c0.1,0,0.1,0.2,0.1,0.2 v0.2c0,0.7,0,1.8,0.9,1.8c0.5,0,0.9-0.4,1-0.9c0,0,0-0.1,0-0.1c0-0.2-0.1-0.4-0.1-0.7c-0.1-0.3-0.2-0.6-0.3-0.9 c-0.3-0.5-0.8-1-1.2-1.4c-0.4-0.4-0.8-0.7-1.1-1c-0.8-0.9-1.3-2.1-1.2-3.3c0-1,0.4-2,1.2-2.8c1.1-0.6,2.4-0.6,3.5,0h0.1h0.1 c1.3,0.8,1.3,1.7,1.3,3.1c0,0.2-0.3,0.2-0.5,0.2s-0.5,0-0.5,0h-1l-0.1,0l-0.1-1.1c0-0.2-0.2-0.6-0.4-0.7h-0.3 c-0.4-0.1-0.8,0.3-0.9,0.7c0,0.1,0,0.1,0,0.2c0.1,0.8,0.6,1.6,1.2,2.2l0.1,0.1l0.2,0.2l0.2,0.2c1.2,1.3,2.5,2.7,2.5,4.5 C17,40.7,16.8,41.1,16.8,41.5z M23.6,32.6c0,0.1-0.1,0.1-0.2,0.2h-2.1c0,0,0,0.2,0,0.2c0,0.1,0,0.2,0,0.3c-0.1,0.8,0,1.7,0,10 l-0.1,0.2l-1.4,0.2c-0.2,0-0.4,0-0.5-0.2l0,0c0-0.3,0-0.5,0-0.8c0.1-3.2,0-6.3-0.1-9.5c0,0,0-0.2-0.1-0.3c-0.2,0-0.3-0.1-0.5-0.1 h-1.2c0,0-0.1-0.1-0.1-0.2v-1.7c0-0.2,0.1-0.3,0.3-0.4l0.8-0.1h0.4c1.4,0,2.8,0.2,4.1,0.2h0.1l0.6-0.1h0.1c0.1,0,0.1,0,0.1,0.1 c0,0.1,0,0.1,0,0.2c0,0.1-0.1,0.7-0.1,0.8l0,0C23.5,32,23.6,32.3,23.6,32.6z M31,31.8c0,1.5,0,3-0.1,4.5c0,0.9-0.1,1.7-0.1,2.6 c0,0,0,0.2,0,0.2s0,0.3,0,0.5c-0.1,2-0.3,4-2.8,4.2h-0.5c-0.5,0-1-0.1-1.4-0.3c-0.3-0.1-0.5-0.3-0.7-0.5c-0.6-0.7-0.9-1.6-0.9-2.5 c0,0,0-0.1,0-0.1c0-0.4-0.1-2.4-0.1-2.8c0-0.1,0-1.1,0-1.5v-1.6c0-0.5,0.1-3.1,0.2-3.6c0-0.1,0.1-0.3,0.2-0.3c0,0,0.1,0,0.1,0h0.4 c0.5,0.1,1.1,0.1,1.6,0.1c0,0.1,0,0.2,0,0.2c0,1-0.2,1.9-0.2,2.9c0-0.4,0,2,0,5.7c0,0.1,0,0.7,0,0.7c0,0.4,0.1,1.1,0.6,1.2h0.4 c1.4,0,1.1-4.4,1.1-8.8c0-0.3-0.1-1.6-0.1-2v-0.1c0-0.1,0.2-0.1,0.3-0.1c0.6,0,1.2,0.1,1.8,0.1c0,0,0.1,0,0.1,0.1l0.1,0.9L31,31.8 z M39.3,36.1c0,1.8-0.2,3.6-0.6,5.3c-0.4,1.7-1.6,1.9-3.4,2.2c-0.8,0.1-1.5,0.2-2.3,0.2h-0.5c-0.1-0.1-0.2-0.2-0.2-0.3 c0-0.3,0-1.4,0-1.7c0-0.1,0-1,0-1.3c0-1.2,0.1-2.4,0.1-3.5c0-2.1-0.1-4.1-0.1-6.2v-0.2c0,0,0.1-0.1,0.1-0.1c0,0,0-0.1,0-0.1l0,0 c0-0.1,0.2-0.1,0.2-0.1h1.2c1.2-0.1,2.5,0,3.7,0.3c0.3,0.2,0.6,0.3,0.9,0.5c1,0.7,1.1,1.9,1.1,2.9v0.2c0,0.2,0,1.4,0,1.6 L39.3,36.1z M42.8,43.1c0,0.1,0,0.4-0.2,0.5l-0.6,0.1H42c-0.3,0-0.6-0.1-0.8-0.1s-0.5,0.1-0.6-0.2v-4.4c0-0.1-0.1-1-0.1-1.1 c0-1,0-2.1-0.1-3.1v-3c0-0.6-0.2-1.5,0.7-1.5h0.1c0.1,0,0.9,0.1,1.1,0.1c0.1,0,0.3,0,0.3,0.1c0,0.5-0.1,1.1-0.1,1.6 c0,1.3,0.1,2.5,0.1,3.8c0,0.5-0.1,1-0.1,1.5c0,1.2,0.1,2.5,0.1,3.7L42.8,43.1z M50.3,40.1c0,0.8-0.1,1.6-0.4,2.3 c-0.5,0.9-1.5,1.4-2.6,1.4H47l-1-0.1c-1-0.4-1.7-1.3-1.9-2.3c0-0.2,0-1-0.1-1.2c0-0.1,0-0.1-0.1-0.2v-1c0-0.5,0-0.9,0-1.4 c0-1.5,0-3.2,0.1-4.8c0.2-0.8,0.4-1.8,1.3-2.2c0.6-0.2,1.2-0.4,1.8-0.5c0.5,0,0.9,0.1,1.4,0.2c0.2,0.1,0.5,0.2,0.7,0.3 c0.1,0.1,0.1,0.1,0.2,0.2c0.5,0.6,0.9,1.4,0.9,2.3c0.1,1.6,0.2,3.2,0.2,4.8C50.5,38.7,50.4,39.4,50.3,40.1L50.3,40.1z M38.5,35.3 l-0.2,4.4c0,0.6-0.1,1.2-1.1,1.2c-1.5,0-1.2-1.4-1.2-1.7c0-1.5-0.1-3-0.1-4.4v-0.4c0,0,0.1-0.5,0.1-0.6c0.1-0.2,0.3-0.4,0.5-0.4 h0.8C38.5,33.4,38.6,34.5,38.5,35.3L38.5,35.3z" />
+                  </g>
+                  <g>
+                     <polygon class="st0" points="4.4,35.2 2.2,35.2 2.2,2.1 39.3,2.1 39.3,4.2 4.4,4.2 		" />
+                  </g>
+               </g>
+            </svg>
+         </button>
+         <button class="o-menu js-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.32 30.32" class="svg-menu">
+               <title>menu</title>
+               <g id="Capa_3" data-name="Capa 3">
+                  <rect class="cls-1" x="2.66" y="2.16" width="32" height="4" />
+                  <rect class="cls-1" x="2.66" y="13.16" width="32" height="4" />
+                  <rect class="cls-1" x="2.66" y="24.16" width="32" height="4" />
+               </g>
+            </svg>
+         </button>
+      </header>
+      <section class="o-section u-headding">
+         <div class="c-main-title">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784.24 252.94" class="svg-main_title">
+               <title>headding</title>
+               <g id="Capa_3" data-name="Capa 3">
+                  <path class="cls-1" d="M21.48,124.66h120.1V15.5H21.48Z" />
+                  <polygon class="cls-2"
+                     points="14.71 86.16 9.38 86.16 9.38 3.03 102.32 3.03 102.32 8.35 14.71 8.35 14.71 86.16" />
+                  <text class="cls-3" transform="translate(29.35 119.29)">CubioStudio</text>
+                  <text class="cls-6" transform="translate(27.35 194.29)">
+                     <tspan class="cls-7" x="0" y="0">Consultoria,</tspan>
+                     <tspan class="cls-7" x="173.74" y="0" xml:space="preserve"> diseño gráfico</tspan>
+                     <tspan class="cls-10" x="0" y="40.8">&amp; desarrollo web.</tspan>
+                  </text>
+               </g>
+            </svg>
+         </div>
+      </section>
+      <section class="o-section u-message" style="">
+         <h1 class="c-main-message">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1114.51 567.64" class="svg-mensaje">
+               <title>mensaje</title>
+               <g id="Capa_3" data-name="Capa 3">
+                  <text class="cls-1" transform="translate(0 99.06)">
+                     Somos una
+                  </text>
+                  <text class="cls-5" transform="translate(0 229.06)">
+                     <a xlink:href="#about" class="js-link">agencia digital,</a>
+                  </text>
+                  <text class="cls-1" transform="translate(0 372.06)">
+                     te ayudamos a lanzar
+                     <tspan x="0" y="139.2">proyectos.</tspan>
+                  </text>
+               </g>
+            </svg>
+         </h1>
+      </section>
+      <section class="o-section u-headding" style="">
+         <h2 class="u-head_section">Proyectos</h2>
+      </section>
+      <section class="o-section u-extra">
+         <div class="fx-mask js-mask" id="besknate" data-project="Besknate">
+            <div class="product">
+               <figure class="photo">
+                  <img src="./projects/bestksnate_1.png" alt="" />
+               </figure>
+               <div class="title">
+                  <h2>
+                     <div><span>BESTKSNATE</span></div>
+                     <div><span>FESTIVAL</span></div>
+                     <div><span>DEL PERDÓN</span></div>
+                  </h2>
+               </div>
+            </div>
 
-<main id="app" class="o-main">
-   <header class="o-header">
-      <div class="o-logo">
-         <?xml version="1.0" encoding="utf-8"?>
-         <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="svg-logo" class="svg-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 57.2 52.7" style="enable-background:new 0 0 57.2 52.7;" xml:space="preserve"> <style type="text/css"> .svg-logo .st0{fill:#222220;} </style> <title>logo</title> <g id="Capa_3"> <g> <path class="st0" d="M6.2,50.6H55V6.2H6.2V50.6z M30.6,20l0.3-2.4v-0.1c1.1,0,1.8,0.3,1.6,1.4l0,0C32.2,20,31.9,20.2,30.6,20 C30.6,20,30.6,20,30.6,20z M48.2,34.2c0,0.3,0,0.5,0,0.8v0.3c0,0.5-0.1,4.1-0.1,4.6c0,0.8-0.5,1.2-1.3,1.2h-0.3h-0.1 c0-0.1,0-0.1,0-0.2c0-0.7,0-1.5,0-2.2c0-0.5,0-1,0-1.5v-3.4c0,0,0-0.1,0.1-0.1c0.2-0.1,0.5-0.1,0.8-0.1 C48,33.3,48.1,33.6,48.2,34.2z M32.6,23.3c0.2,1.1,0,1.8-1.4,2h-0.1l-0.1-0.1l-0.2-1c0-0.3-0.1-0.6-0.2-0.9c0-0.1,0-0.4,0-0.4 s-0.1-0.7-0.1-0.8c0.5-0.1,0.9,0,1.4,0.2C32.4,22.5,32.6,22.9,32.6,23.3z M42.8,19.8l-0.1,4.4c0,0.6-0.1,1.2-0.8,1.2 c-1.1,0-0.8-1.4-0.8-1.6c0-1.5-0.1-3-0.1-4.4v-0.4c0,0,0-0.5,0.1-0.6s0.2-0.4,0.4-0.4H42C42.8,17.9,42.9,19,42.8,19.8z M19.1,23.9 c0,0.8-0.1,1.5-0.3,2.3c0,0.1,0,0.1,0,0.2c-0.4,0.7-1.2,2-2.4,2h-1.9c-1.1-0.1-2.1-0.9-2.4-2C12,25.9,12,25.5,11.9,25l0.1-7.2 c0,0,0-0.2,0-0.2c0.1-0.7,0.4-1.3,0.9-1.8c0.8-0.8,1.9-1.2,3-1c0.6,0,1.3,0.2,1.8,0.5c0.8,0.6,1.3,1.5,1.2,2.5 c0,0.5-0.1,1-0.1,1.5c0,0-0.1,0.1-0.1,0.1l-2-0.1c-0.1,0-0.2-0.1-0.2-0.2s0.1-0.7,0.1-0.8c0,0,0-0.1,0-0.1c0-0.8-0.3-1.3-1.2-1.3 c-0.5,0-1.1,0.2-1.1,1.4v0.8c0,0.1,0,0.7,0,0.8v3.3c0,0.2-0.1,0.5-0.1,0.7c0,0.8,0.2,1.9,1.1,2.3h0.1h0.6l0.2-0.1 c0.5-0.3,0.4-1,0.4-1.4c0,0,0.1-0.2,0.1-0.2v-1c0-0.1,0-0.1-0.1-0.2l0,0c0-0.1,0.1-0.1,0.2-0.1h0.6h1.2H19l0.1,0.1 c0,0,0,0.4,0.1,0.5L19.1,23.9z M26.8,16.3c0,1.5,0,3-0.1,4.5c0,0.9-0.1,1.7-0.1,2.6c0,0,0,0.2,0,0.2s0,0.4,0,0.5 c-0.1,2-0.3,4-2.8,4.2h-0.5c-0.5,0-1-0.1-1.4-0.3c-0.3-0.1-0.5-0.3-0.7-0.5c-0.6-0.7-0.9-1.6-0.9-2.5c0,0,0-0.1,0-0.1 c0-0.4-0.1-2.4-0.1-2.8c0-0.1,0-1.1,0-1.5v-1.6c0-0.5,0.1-3.1,0.2-3.6c0-0.1,0-0.1,0.1-0.2c0-0.1,0.1-0.1,0.2-0.1h0.1h0.4 c0.5,0.1,1.1,0.1,1.6,0.1c0,0.1,0,0.2,0,0.2c0,1-0.2,1.9-0.2,2.9c0-0.4,0,2,0,5.7c0,0.1,0,0.7,0,0.7c0,0.4,0.1,1.1,0.6,1.2h0.4 c1.4,0,1.1-4.4,1.1-8.9c0-0.3-0.1-1.6-0.1-2v-0.1c0-0.1,0.2-0.1,0.3-0.1c0.6,0,1.2,0.1,1.8,0.1c0,0,0.1,0,0.1,0.1l0.1,0.9 L26.8,16.3z M35.7,25.3c-0.8,2.6-2.7,3-5.3,3c-0.5,0-1,0-1.5,0c-0.1,0-0.3,0-0.4,0h-0.1c0-0.2,0-1.1,0-1.3s0-1.3,0-1.5 s-0.1-1.3-0.1-1.4c0-0.1,0-0.2,0-0.3c0-0.2-0.1-2.2-0.1-2.5v0c0-1,0-2,0-2.9s-0.1-2.1,0-3.1c0,0-0.1-0.1-0.1-0.1 c0-0.2,0.3-0.2,0.4-0.2l0,0c6.2-0.8,8.7,1.9,5.4,6l0,0c1.3,0.9,2,2.3,2,3.8C35.9,24.9,35.8,25.1,35.7,25.3z M39,27.7 c0,0.1,0,0.4-0.2,0.5l-0.6,0.1h-0.1c-0.3,0-0.6-0.1-0.8-0.1s-0.5,0.1-0.6-0.1v-4.4c0-0.1-0.1-1-0.1-1.1c0-1,0-2.1-0.1-3.1v-3 c0-0.6-0.2-1.5,0.7-1.5h0.1c0.1,0,0.9,0.1,1.1,0.1c0.1,0,0.3,0,0.3,0.1c0,0.6-0.1,1.1-0.1,1.6c0,1.3,0.1,2.5,0.1,3.8 c0,0.5-0.1,1-0.1,1.5c0,1.2,0.1,2.5,0.1,3.7L39,27.7z M46.5,24.7c0,0.8-0.1,1.6-0.4,2.3c-0.5,0.9-1.5,1.4-2.6,1.4h-0.4l-1-0.1 c-0.9-0.4-1.6-1.3-1.8-2.3c0-0.2,0-1-0.1-1.2c0-0.1,0-0.2,0-0.2v-1c0-0.5,0-0.9,0-1.4c0-1.5,0-3.2,0.1-4.8 c0.2-0.8,0.4-1.8,1.3-2.2c0.6-0.2,1.2-0.4,1.8-0.4c0.5,0,0.9,0.1,1.4,0.2c0.2,0.1,0.5,0.2,0.7,0.3c0.1,0.1,0.1,0.1,0.2,0.2 c0.5,0.6,0.9,1.4,0.9,2.3c0.1,1.6,0.2,3.2,0.2,4.8C46.7,23.2,46.6,24,46.5,24.7L46.5,24.7z M16.8,41.5c-0.4,1.2-1.5,2.1-2.8,2.2 c-1.1,0.1-2.2-0.4-2.7-1.4c-0.3-0.7-0.5-1.4-0.4-2.2v-0.6c0-0.1,0.1-0.1,0.2-0.1c0.5,0,1.1-0.1,1.6-0.1l0,0c0.1,0,0.1,0.2,0.1,0.2 v0.2c0,0.7,0,1.8,0.9,1.8c0.5,0,0.9-0.4,1-0.9c0,0,0-0.1,0-0.1c0-0.2-0.1-0.4-0.1-0.7c-0.1-0.3-0.2-0.6-0.3-0.9 c-0.3-0.5-0.8-1-1.2-1.4c-0.4-0.4-0.8-0.7-1.1-1c-0.8-0.9-1.3-2.1-1.2-3.3c0-1,0.4-2,1.2-2.8c1.1-0.6,2.4-0.6,3.5,0h0.1h0.1 c1.3,0.8,1.3,1.7,1.3,3.1c0,0.2-0.3,0.2-0.5,0.2s-0.5,0-0.5,0h-1l-0.1,0l-0.1-1.1c0-0.2-0.2-0.6-0.4-0.7h-0.3 c-0.4-0.1-0.8,0.3-0.9,0.7c0,0.1,0,0.1,0,0.2c0.1,0.8,0.6,1.6,1.2,2.2l0.1,0.1l0.2,0.2l0.2,0.2c1.2,1.3,2.5,2.7,2.5,4.5 C17,40.7,16.8,41.1,16.8,41.5z M23.6,32.6c0,0.1-0.1,0.1-0.2,0.2h-2.1c0,0,0,0.2,0,0.2c0,0.1,0,0.2,0,0.3c-0.1,0.8,0,1.7,0,10 l-0.1,0.2l-1.4,0.2c-0.2,0-0.4,0-0.5-0.2l0,0c0-0.3,0-0.5,0-0.8c0.1-3.2,0-6.3-0.1-9.5c0,0,0-0.2-0.1-0.3c-0.2,0-0.3-0.1-0.5-0.1 h-1.2c0,0-0.1-0.1-0.1-0.2v-1.7c0-0.2,0.1-0.3,0.3-0.4l0.8-0.1h0.4c1.4,0,2.8,0.2,4.1,0.2h0.1l0.6-0.1h0.1c0.1,0,0.1,0,0.1,0.1 c0,0.1,0,0.1,0,0.2c0,0.1-0.1,0.7-0.1,0.8l0,0C23.5,32,23.6,32.3,23.6,32.6z M31,31.8c0,1.5,0,3-0.1,4.5c0,0.9-0.1,1.7-0.1,2.6 c0,0,0,0.2,0,0.2s0,0.3,0,0.5c-0.1,2-0.3,4-2.8,4.2h-0.5c-0.5,0-1-0.1-1.4-0.3c-0.3-0.1-0.5-0.3-0.7-0.5c-0.6-0.7-0.9-1.6-0.9-2.5 c0,0,0-0.1,0-0.1c0-0.4-0.1-2.4-0.1-2.8c0-0.1,0-1.1,0-1.5v-1.6c0-0.5,0.1-3.1,0.2-3.6c0-0.1,0.1-0.3,0.2-0.3c0,0,0.1,0,0.1,0h0.4 c0.5,0.1,1.1,0.1,1.6,0.1c0,0.1,0,0.2,0,0.2c0,1-0.2,1.9-0.2,2.9c0-0.4,0,2,0,5.7c0,0.1,0,0.7,0,0.7c0,0.4,0.1,1.1,0.6,1.2h0.4 c1.4,0,1.1-4.4,1.1-8.8c0-0.3-0.1-1.6-0.1-2v-0.1c0-0.1,0.2-0.1,0.3-0.1c0.6,0,1.2,0.1,1.8,0.1c0,0,0.1,0,0.1,0.1l0.1,0.9L31,31.8 z M39.3,36.1c0,1.8-0.2,3.6-0.6,5.3c-0.4,1.7-1.6,1.9-3.4,2.2c-0.8,0.1-1.5,0.2-2.3,0.2h-0.5c-0.1-0.1-0.2-0.2-0.2-0.3 c0-0.3,0-1.4,0-1.7c0-0.1,0-1,0-1.3c0-1.2,0.1-2.4,0.1-3.5c0-2.1-0.1-4.1-0.1-6.2v-0.2c0,0,0.1-0.1,0.1-0.1c0,0,0-0.1,0-0.1l0,0 c0-0.1,0.2-0.1,0.2-0.1h1.2c1.2-0.1,2.5,0,3.7,0.3c0.3,0.2,0.6,0.3,0.9,0.5c1,0.7,1.1,1.9,1.1,2.9v0.2c0,0.2,0,1.4,0,1.6 L39.3,36.1z M42.8,43.1c0,0.1,0,0.4-0.2,0.5l-0.6,0.1H42c-0.3,0-0.6-0.1-0.8-0.1s-0.5,0.1-0.6-0.2v-4.4c0-0.1-0.1-1-0.1-1.1 c0-1,0-2.1-0.1-3.1v-3c0-0.6-0.2-1.5,0.7-1.5h0.1c0.1,0,0.9,0.1,1.1,0.1c0.1,0,0.3,0,0.3,0.1c0,0.5-0.1,1.1-0.1,1.6 c0,1.3,0.1,2.5,0.1,3.8c0,0.5-0.1,1-0.1,1.5c0,1.2,0.1,2.5,0.1,3.7L42.8,43.1z M50.3,40.1c0,0.8-0.1,1.6-0.4,2.3 c-0.5,0.9-1.5,1.4-2.6,1.4H47l-1-0.1c-1-0.4-1.7-1.3-1.9-2.3c0-0.2,0-1-0.1-1.2c0-0.1,0-0.1-0.1-0.2v-1c0-0.5,0-0.9,0-1.4 c0-1.5,0-3.2,0.1-4.8c0.2-0.8,0.4-1.8,1.3-2.2c0.6-0.2,1.2-0.4,1.8-0.5c0.5,0,0.9,0.1,1.4,0.2c0.2,0.1,0.5,0.2,0.7,0.3 c0.1,0.1,0.1,0.1,0.2,0.2c0.5,0.6,0.9,1.4,0.9,2.3c0.1,1.6,0.2,3.2,0.2,4.8C50.5,38.7,50.4,39.4,50.3,40.1L50.3,40.1z M38.5,35.3 l-0.2,4.4c0,0.6-0.1,1.2-1.1,1.2c-1.5,0-1.2-1.4-1.2-1.7c0-1.5-0.1-3-0.1-4.4v-0.4c0,0,0.1-0.5,0.1-0.6c0.1-0.2,0.3-0.4,0.5-0.4 h0.8C38.5,33.4,38.6,34.5,38.5,35.3L38.5,35.3z"/> </g> <g> <polygon class="st0" points="4.4,35.2 2.2,35.2 2.2,2.1 39.3,2.1 39.3,4.2 4.4,4.2 		"/> </g> </g> </svg></div>
-      <div class="o-menu">
-         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.32 30.32" class="svg-menu"><defs><style></style></defs><title>menu</title><g id="Capa_3" data-name="Capa 3"><rect class="cls-1" x="2.66" y="2.16" width="32" height="4"/><rect class="cls-1" x="2.66" y="13.16" width="32" height="4"/><rect class="cls-1" x="2.66" y="24.16" width="32" height="4"/></g></svg>
-      </div>
-   </header>
-   <section class="o-section u-headding">
-      <div class="c-main-title">
-         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784.24 252.94" class="svg-main_title"><defs><style> </style></defs><title>headding</title><g id="Capa_3" data-name="Capa 3"><path class="cls-1" d="M21.48,124.66h120.1V15.5H21.48Z"/><polygon class="cls-2" points="14.71 86.16 9.38 86.16 9.38 3.03 102.32 3.03 102.32 8.35 14.71 8.35 14.71 86.16"/><text class="cls-3" transform="translate(29.35 119.29)">Cubio<tspan class="cls-4" x="357.89" y="0">S</tspan><tspan class="cls-5" x="430.2" y="0">tudio</tspan></text>
-            <text class="cls-6" transform="translate(27.35 194.29)">C<tspan class="cls-7" x="22.54" y="0">onsultoria</tspan><tspan class="cls-8" x="167.04" y="0">,</tspan><tspan class="cls-7" x="173.74" y="0" xml:space="preserve"> diseño </tspan><tspan class="cls-7" x="280.63" y="0">gráfico</tspan> <tspan class="cls-10"><tspan x="0" y="40.8">&amp; desarrollo web.</tspan></tspan>  </text>  </g></svg> 
-      </div>
-   </section>
-   <section class="o-section u-message" style="background-color: #1c1e1f">
-      <h1 class="c-main-message">
-         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1114.51 567.64" class="svg-mensaje"><defs><style></style></defs><title>mensaje</title><g id="Capa_3" data-name="Capa 3"><text class="cls-1" transform="translate(0 99.06)">Somos una</text><text class="cls-1" transform="translate(0 372.06)">te ayudamos a lanzar<tspan x="0" y="139.2">p</tspan><tspan class="cls-2" x="72.38" y="139.2">r</tspan><tspan class="cls-3" x="112.4" y="139.2">oyectos</tspan><tspan class="cls-4" x="523.38" y="139.2">.</tspan></text><text class="cls-5" transform="translate(0 229.06)">agencia digital,</text></g></svg>
-      </h1>
-   </section>
-   <section class="o-section" style="font-size: 14vw; font-family: sans-serif, Arial, Helvetica, sans-serif; font-weight: bold; display: flex; justify-content: center; align-items: center; color: #d4d4d4;">
-      Proyectos
-   </section>
-   <section class="o-section u-extra">
-      <div class="fx-mask js-mask" id="besknate" data-project="Besknate">
-         <div class="product">
-            <figure class="photo">
-               <img src="./projects/bestksnate_1.png" alt="" />
-            </figure>
-            <div class="title">
-               <h2>
-                  <div><span>BESTKSNATE</span></div>
-                  <div><span>FESTIVAL</span></div>
-                  <div><span>DEL PERDÓN</span></div>
-               </h2>
+            <div class="product">
+               <figure class="photo">
+                  <img src="./projects/bestksnate_2.png" alt="" />
+               </figure>
+               <div class="title">
+                  <h2>
+                     <div><span>APLICACIÓN</span></div>
+                     <div><span>MARKETING</span></div>
+                  </h2>
+               </div>
+            </div>
+
+            <div class="product">
+               <figure class="photo">
+                  <img src="./projects/bestksnate_3.png" alt="" />
+               </figure>
+               <div class="title">
+                  <h2>
+                     <div><span>DESARROLLO</span></div>
+                     <div><span>DE MARCA</span></div>
+                  </h2>
+               </div>
             </div>
          </div>
+      </section>
+      <section class="o-section u-extra">
+         <div class="fx-mask js-mask" id="orca" data-project="Orca">
+            <div class="product">
+               <figure class="photo">
+                  <img src="./projects/orca_1.png" alt="" />
+               </figure>
+               <div class="title">
+                  <h2>
+                     <div><span>PROYECTO</span></div>
+                     <div><span>ORCA</span></div>
+                  </h2>
+               </div>
+            </div>
 
-         <div class="product">
-            <figure class="photo">
-               <img src="./projects/bestksnate_2.png" alt="" />
-            </figure>
-            <div class="title">
-               <h2>
-                  <div><span>APLICACIÓN</span></div>
-                  <div><span>MARKETING</span></div>
-               </h2>
+            <div class="product">
+               <figure class="photo">
+                  <img src="./projects/orca_2.png" alt="" />
+               </figure>
+               <div class="title">
+                  <h2>
+                     <div><span>DESARROLLO</span></div>
+                     <div><span>DE MARCA</span></div>
+                  </h2>
+               </div>
+            </div>
+
+            <div class="product">
+               <figure class="photo">
+                  <img src="./projects/orca_3.png" alt="" />
+               </figure>
+               <div class="title">
+                  <h2>
+                     <div><span>ESTRATEGIA DE</span></div>
+                     <div><span>COMUNICACIÓN</span></div>
+                  </h2>
+               </div>
             </div>
          </div>
+      </section>
+      <section class="o-section u-headding" id="about">
+         <h2 class="u-head_section">Somos</h2>
+      </section>
+      <section>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis atque quis blanditiis nostrum fuga
+            sapiente ipsa minima laudantium, ex dicta quos suscipit earum aliquam aliquid dolores magnam illum ullam
+            reprehenderit.
+         </p>
+      </section>
+      <section class="o-section u-headding" id="contact">
+         <h2 class="u-head_section">Contacto</h2>
 
-         <div class="product">
-            <figure class="photo">
-               <img src="./projects/bestksnate_3.png" alt="" />
-            </figure>
-            <div class="title">
-               <h2>
-                  <div><span>DESARROLLO</span></div>
-                  <div><span>DE MARCA</span></div>
-               </h2>
-            </div>
-         </div>
-      </div>
-   </section>
-   <section class="o-section u-extra">
-      <div class="fx-mask js-mask" id="orca" data-project="Orca">
-         <div class="product">
-            <figure class="photo">
-               <img src="./projects/orca_1.png" alt="" />
-            </figure>
-            <div class="title">
-               <h2>
-                  <div><span>PROYECTO</span></div>
-                  <div><span>ORCA</span></div>
-               </h2>
-            </div>
-         </div>
-
-         <div class="product">
-            <figure class="photo">
-               <img src="./projects/orca_2.png" alt="" />
-            </figure>
-            <div class="title">
-               <h2>
-                  <div><span>DESARROLLO</span></div>
-                  <div><span>DE MARCA</span></div>
-               </h2>
-            </div>
-         </div>
-
-         <div class="product">
-            <figure class="photo">
-               <img src="./projects/orca_3.png" alt="" />
-            </figure>
-            <div class="title">
-               <h2>
-                  <div><span>ESTRATEGIA DE</span></div>
-                  <div><span>COMUNICACIÓN</span></div>
-               </h2>
-            </div>
-         </div>
-      </div>
-   </section>
-   <div class="mouse-tracker"></div>
-</main>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
+      </section>
+      <footer class="o-footer  u-middle u-message">
+         somos
+      </footer>
+      <div class="mouse-tracker"></div>
+   </main>
+   <!-- partial -->
+   <script src="./script.js"></script>
 </body>
+
 </html>
