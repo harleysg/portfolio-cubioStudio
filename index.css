@@ -59,7 +59,7 @@ img { max-width: 100%; }
 
 .c-main-title, .c-main-message { width: 90vw; max-width: 1100px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; padding: 2vw; }
 
-.c-founders { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[10]; grid-template-columns: repeat(10, 1fr); -ms-grid-rows: (90px)[5]; grid-template-rows: repeat(5, 90px); -ms-flex-pack: distribute; justify-content: space-around; grid-gap: 0; max-width: 890px; margin: auto; padding: 10vw 0; }
+.c-founders { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[10]; grid-template-columns: repeat(10, 1fr); -ms-grid-rows: (90px)[5]; grid-template-rows: repeat(5, 90px); -ms-flex-pack: distribute; justify-content: space-around; grid-gap: 0; max-width: 890px; margin: auto; padding: 5vw 0 5vw 0; }
 
 .c-founders_this { min-height: 320px; min-width: 330px; position: relative; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; padding: 20px; margin: 0; }
 
@@ -103,6 +103,8 @@ img { max-width: 100%; }
 .svg-menu .cls-1 { fill: #383838; }
 
 .svg-logo .st0 { fill: #222220; }
+
+.svg-mensaje a { fill: var(--color-a); }
 
 .svg-mensaje .cls-1, .svg-mensaje .cls-5 { font-size: 116px; font-family: var(--font-avenirnext-bold), roboto; font-weight: 700; letter-spacing: -0.03em; }
 

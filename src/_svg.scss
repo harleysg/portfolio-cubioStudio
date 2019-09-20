@@ -62,6 +62,9 @@
 }
 
 .svg-mensaje {
+    a {
+        fill: var(--color-a);
+    }
     .cls-1,
     .cls-5 {
         font-size: 116px;
