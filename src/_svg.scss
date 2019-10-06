@@ -1,5 +1,48 @@
 @charset "utf-8";
 
+.svg-section_1_heading {
+    margin-top: 112px;
+    .foreign-title {
+        margin: 0;
+        font-size: 57px;
+        letter-spacing: -3px;
+        line-height: 68px;
+        span {
+            color: var(--color-a);
+        }
+    }
+    .st0 {
+        fill: #1f1f1f;
+    }
+
+    .st1 {
+        // font-family: var(--font-avenirnext-bold);
+    }
+
+    .st2 {
+        font-size: 16px;
+    }
+
+    .st3 {
+        fill: #fcc301;
+    }
+
+    .st4 {
+        fill: none;
+    }
+
+    .st5 {
+        fill: #fdc401;
+    }
+
+    .st6 {
+        font-size: 57px;
+    }
+
+    .st7 {
+        letter-spacing: -2px;
+    }
+}
 .svg-main_title {
     .cls-1 {
         fill: none;

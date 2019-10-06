@@ -151,3 +151,16 @@ const classOnWheelEnd = new WheelEnd(
     document,
     false
 );
+
+document.addEventListener(
+    'scroll',
+    (e) => {
+        const mega_heading = document.querySelector('.o-mega_heading');
+        let scrt = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        console.log(scrt);
+        setTimeout(() => {
+            mega_heading ? (mega_heading.style.left = `-${scrt}px`) : null;
+        }, 90);
+    },
+    true
+);
