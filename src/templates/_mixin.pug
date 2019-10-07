@@ -1,0 +1,14 @@
+mixin headding(tag, indicator, enfasis, complement)
+    if(tag)
+        #{tag}(class="c-section_headding")&attributes(attributes)
+            small.c-section_headding-indicator= indicator
+            .c-section_headding-separador
+            span.c-section_headding-enfasis= enfasis
+            |  #{complement}
+mixin chevron
+    .u-chevron
+        .chevron.u-chevron-arrow
+        .chevron.u-chevron-arrow
+        .chevron.u-chevron-arrow
+mixin mega_headding(text)
+    .o-mega_headding-wrapper&attributes(attributes): .o-mega_headding.js-mega_headding= text
