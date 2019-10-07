@@ -21,19 +21,19 @@
     --mouse-y: calc(50vh + 1px);
     --mouse-bg: var(--color-a);
 }
-@import './shared';
+@import './styles/shared';
 /* ---------------------------------- */
-@import './typograph';
+@import './styles/typograph';
 /* ---------------------------------- */
-@import './base';
+@import './styles/base';
 /* ---------------------------------- */
-@import './layout/index';
+@import './styles/layout/index';
 /* ---------------------------------- */
-@import './components/index';
+@import './styles/components/index';
 /* ---------------------------------- */
-@import './utilities/index';
+@import './styles/utilities/index';
 /* ---------------------------------- */
-@import './specificity';
+@import './styles/specificity';
 
 @keyframes animateSize {
     to {
