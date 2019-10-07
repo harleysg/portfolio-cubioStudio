@@ -1,0 +1,67 @@
+.mouse-tracker {
+    --size-init: 0.6rem;
+    --size-active: 1.5rem;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: var(--size-init);
+    height: var(--size-init);
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
+    transform: translate(-50%, -50%) translate(var(--mouse-x), var(--mouse-y));
+    transition: border-radius 0.15s ease-in-out, background-color 0.1s ease-in-out, width 0.1s ease-in-out, height 0.1s ease-in-out;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+        content: '';
+        // border-radius: 50%;
+        position: absolute;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--theme-contrast);
+    }
+
+    &::before {
+        width: 90%;
+        height: 90%;
+        z-index: -2;
+        border-bottom: none;
+        border-right: none;
+        background-color: transparent;
+    }
+    &::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: var(--mouse-bg);
+    }
+
+    &.on-link {
+        width: var(--size-active);
+        height: var(--size-active);
+        cursor: pointer;
+        background-image: linear-gradient(460deg, var(--color-a), var(--color-b));
+        &::after,
+        &::before {
+            border-radius: 0%;
+            border-width: 2px;
+        }
+        &::before {
+            top: -4px;
+            left: -4px;
+        }
+    }
+    &[data-theme='on-gold'] {
+        --mouse-bg: var(--color-w);
+    }
+    &[data-theme='on-light'] {
+    }
+    &[data-theme='on-gray'] {
+    }
+    &[data-theme='on-dark'] {
+    }
+}

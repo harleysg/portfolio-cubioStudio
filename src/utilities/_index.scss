@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* ---------------------------------- */
+@import './svg';
+/* ---------------------------------- */
+@import './mask';
+/* ---------------------------------- */
+@import './mouse';
+/* ---------------------------------- */
+.u- {
+    &head_section,
+    &headding,
+    &message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &head_section {
+        font-size: 10vmin;
+        margin: 1vh 0 3vh;
+        font-family: var(--font-bold), Helvetica;
+        font-weight: bold;
+        color: var(--color-a);
+        transition: text-shadow 0.3s ease-in-out, color 0.35s ease-in-out;
+        &::before {
+            content: attr(data-name);
+            width: 100%;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+
+            filter: opacity(0.2);
+            opacity: 0.3;
+
+            font-size: 200%;
+            color: rgb(100, 100, 100);
+            text-align: center;
+        }
+        &:hover {
+            text-shadow: 0 3px 0 var(--color-1);
+            &::before {
+                text-shadow: none;
+            }
+        }
+    }
+    &message {
+        background-color: #1c1e1f;
+        color: var(--color-0);
+    }
+    &middle {
+        min-height: 20rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &cubo {
+        &::before {
+            content: '';
+            width: 90%;
+            height: 90%;
+            border: 4px solid var(--color-a);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: transparent;
+        }
+    }
+}
+
+.u-chevron {
+    $base: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $base * 10;
+    &-arrow {
+        position: absolute;
+        top: -$base * 0.6;
+        width: $base * 3.5;
+        height: $base * 0.6;
+        opacity: 0;
+        transform: scale(0.3);
+        animation: move-chevron 3s ease-out infinite;
+        &:first-child {
+            animation: move-chevron 3s ease-out 1s infinite;
+        }
+
+        &:nth-child(2) {
+            animation: move-chevron 3s ease-out 2s infinite;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            background: #2c3e50;
+        }
+
+        &:before {
+            left: 0;
+            transform: skewY(30deg);
+        }
+
+        &:after {
+            right: 0;
+            width: 50%;
+            transform: skewY(-30deg);
+        }
+    }
+    @keyframes move-chevron {
+        25% {
+            opacity: 1;
+        }
+        33.3% {
+            opacity: 1;
+            transform: translateY($base * 3.8);
+        }
+        66.6% {
+            opacity: 1;
+            transform: translateY($base * 5.2);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY($base * 8) scale(0.5);
+        }
+    }
+}

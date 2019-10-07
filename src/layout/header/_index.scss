@@ -1,0 +1,21 @@
+@charset "utf-8";
+.o- {
+    &header {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 3rem;
+        padding: 2rem 6vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--theme-header-bg);
+        &_btn {
+            background-color: transparent;
+            min-height: 3rem;
+            border: none;
+        }
+    }
+}

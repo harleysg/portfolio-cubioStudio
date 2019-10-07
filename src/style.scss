@@ -3,19 +3,23 @@
 :root {
     --duration: 1.6s;
     --easing: cubic-bezier(0.2, 0, 0.3, 1);
-    --mouse-x: calc(50vw + 1px);
-    --mouse-y: calc(50vh + 1px);
     --theme-contrast: #323232;
     --color-w: #ffffff;
-    --color-0: #d4d4d4;
+    --color-0: #f0f0f0;
     --color-1: #323232;
     --color-a: #eec32e; //#bc5ff1;
     --color-b: #fdc400; //#7842e6;
     --color-c: #fdc400; //#3a1a7b;
 
-    --font-avenirnext-medium: AvenirNext-Medium, sans-serif;
-    --font-avenirnext-bold: AvenirNext-Bold, sans-serif;
-    --font-avenirnext: Avenir Next, sans-serif;
+    --theme-section-bg: var(--color-w);
+
+    --font-medium: AvenirNext-Medium, sans-serif;
+    --font-bold: AvenirNext-Bold, sans-serif;
+    --font-normal: Avenir Next, sans-serif;
+
+    --mouse-x: calc(50vw + 1px);
+    --mouse-y: calc(50vh + 1px);
+    --mouse-bg: var(--color-a);
 }
 @import './shared';
 /* ---------------------------------- */
@@ -23,13 +27,13 @@
 /* ---------------------------------- */
 @import './base';
 /* ---------------------------------- */
-@import './layout';
+@import './layout/index';
 /* ---------------------------------- */
-@import './svg';
+@import './components/index';
 /* ---------------------------------- */
-@import './mask';
+@import './utilities/index';
 /* ---------------------------------- */
-@import './mouse';
+@import './specificity';
 
 @keyframes animateSize {
     to {

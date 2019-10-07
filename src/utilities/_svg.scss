@@ -16,7 +16,7 @@
     }
 
     .st1 {
-        // font-family: var(--font-avenirnext-bold);
+        // font-family: var(--font-bold);
     }
 
     .st2 {
@@ -52,7 +52,7 @@
     }
     .cls-3 {
         font-size: 131px;
-        font-family: var(--font-avenirnext-bold);
+        font-family: var(--font-bold);
         @include fontBold();
         font-weight: 700;
         letter-spacing: -0.03em;
@@ -69,7 +69,7 @@
     }
     .cls-6 {
         font-size: 34px;
-        font-family: var(--font-avenirnext-medium);
+        font-family: var(--font-medium);
         @include fontBold();
         font-weight: 500;
         letter-spacing: -0.04em;
@@ -111,7 +111,7 @@
     .cls-1,
     .cls-5 {
         font-size: 116px;
-        font-family: var(--font-avenirnext-bold), roboto;
+        font-family: var(--font-bold), roboto;
         @include fontBold();
         font-weight: 700;
         letter-spacing: -0.03em;

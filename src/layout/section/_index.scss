@@ -1,0 +1,18 @@
+@import './headding';
+
+.o- {
+    &section {
+        width: 100%;
+        min-height: 100vh;
+        background-color: var(--theme-section-bg);
+        &:first-of-type {
+            padding-top: 7rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &.u-extra {
+            height: 130vh;
+        }
+    }
+}

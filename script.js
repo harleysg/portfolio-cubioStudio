@@ -1,12 +1,12 @@
 class MaskEffect {
     constructor(app, children) {
-        this.elApp = document.querySelector(app);
-        this.elProducts = this.elApp.querySelectorAll(children);
+        this.elApp = app && document.querySelector(app);
+        this.elProducts = children && this.elApp && this.elApp.querySelectorAll(children);
         this.product = 0;
         /* ---------------------------------- */
-        this.elProducts[this.product].dataset.active = true;
-        this.elApp.dataset.product = this.product + 1;
-        this.elApp.dataset.productCount = this.elProducts.length;
+        this.elProducts && (this.elProducts[this.product].dataset.active = true);
+        this.elApp && (this.elApp.dataset.product = this.product + 1);
+        this.elApp && (this.elApp.dataset.productCount = this.elProducts.length);
     }
     /* ---------------------------------- */
     changeProduct() {
@@ -17,7 +17,7 @@ class MaskEffect {
     }
     /* ---------------------------------- */
     init(e) {
-        this.changeProduct();
+        this.elProducts && this.elApp && this.changeProduct();
     }
 }
 /* ---------------------------------- */
@@ -124,16 +124,33 @@ class AddEvent {
     }
 }
 /* ---------------------------------- */
-betsknate.addEventListener('click', (e) => maskEffectOnBetsknate.changeProduct());
-orca.addEventListener('click', (e) => maskEffectOnOrca.changeProduct());
+document.getElementById('betsknate') && new AddEvent('#betsknate', 'click', (e) => maskEffectOnBetsknate.changeProduct());
+document.getElementById('orca') && new AddEvent('#orca', 'click', (e) => maskEffectOnOrca.changeProduct());
 document.addEventListener('mousemove', onMousePosition);
 document.addEventListener('touchmove', onMousePosition);
 /* ---------------------------------- */
 const mouseTrackerStatus = (e) => {
     const type = e.event.type;
+    const target = e.event.target;
     const mouse = document.querySelector('.mouse-tracker');
-    type == 'mouseenter' && mouse.classList.add('on-link');
-    type == 'mouseleave' && mouse.classList.remove('on-link');
+    let onTheme = target.dataset && target.dataset.theme;
+    if (type == 'mouseenter') {
+        if (onTheme) {
+            onTheme == 'gold' && (mouse.dataset.theme = 'on-gold');
+            onTheme == 'light' && (mouse.dataset.theme = 'on-light');
+            onTheme == 'gray' && (mouse.dataset.theme = 'on-gray');
+            onTheme == 'dark' && (mouse.dataset.theme = 'on-dark');
+        } else {
+            mouse.classList.add('on-link');
+        }
+    }
+    if (type == 'mouseleave') {
+        if (onTheme) {
+            delete mouse.dataset.theme;
+        } else {
+            mouse.classList.remove('on-link');
+        }
+    }
 };
 /* ---------------------------------- */
 const mouseTrackStatusOnDOM = ((arrStringsDOMSelectors) => {
@@ -141,26 +158,79 @@ const mouseTrackStatusOnDOM = ((arrStringsDOMSelectors) => {
         new AddEvent(elm, 'mouseenter', mouseTrackerStatus);
         new AddEvent(elm, 'mouseleave', mouseTrackerStatus);
     });
-})(['.js-mask', '.js-menu', '.js-logo', '.js-link']);
+})(['.js-mask', '.js-menu', '.js-logo', '.js-link', '[data-theme]']);
 /* ---------------------------------- */
-const classOnWheelEnd = new WheelEnd(
-    (cb) => {
-        //onMaskEffect.init(cb.event);
-        // console.log(cb);
-    },
-    document,
-    false
-);
+// const classOnWheelEnd = new WheelEnd(
+//     (cb) => {
+//         //onMaskEffect.init(cb.event);
+//         // console.log(cb);
+//     },
+//     document,
+//     false
+// );
 
 document.addEventListener(
     'scroll',
     (e) => {
-        const mega_heading = document.querySelector('.o-mega_heading');
+        const mega_heading = document.querySelector('.js-mega_headding');
         let scrt = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        console.log(scrt);
+
         setTimeout(() => {
-            mega_heading ? (mega_heading.style.left = `-${scrt}px`) : null;
+            mega_heading ? (mega_heading.style.left = `-${scrt / 2}px`) : null;
         }, 90);
     },
     true
 );
+
+function sgParallax(stringElms) {
+    if (!stringElms) {
+        return;
+    }
+    const slides = stringElms;
+    const processScroll = () => {
+        let scrt = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        let win_h = window.innerHeight;
+        let win_w = window.innerWidth;
+        let d_h = document.body.offsetHeight;
+        [...slides].map((slide, i) => {
+            let p = slides[i];
+            let top = scrt + p.getBoundingClientRect().top;
+            let h = p.clientHeight || p.offsetHeight || p.scrollHeight;
+            let x = i % 2 ? '-15%' : '15%';
+
+            // Selector Inner Elements
+            let startY = top;
+            let stopY = top + h + 50;
+            let totalY = stopY - startY;
+
+            function prefixCss_transform(value) {
+                return `-webkit-transform: ${value} ;
+						-moz-transform: ${value} ;
+						transform: ${value};`;
+            }
+            function prefixCss_transform3D(value) {
+                return `-webkit-translate3d: ${value} ;
+						-moz-translate3d: ${value} ;
+						translate3d: ${value};`;
+            }
+
+            if (win_w < 1200) {
+                x = '0px';
+            }
+
+            if (scrt + win_h >= startY && scrt + win_h <= stopY) {
+                let percentage = (scrt + win_h - startY) / totalY;
+                let pTop = 90 * (1 - percentage);
+                let pTranslation = 'translate3d(0,' + pTop + 'px' + ',0)';
+                p.style.cssText = prefixCss_transform(pTranslation);
+            }
+        });
+    };
+    if (typeof window.orientation == 'undefined') {
+        window.addEventListener('scroll', processScroll, false);
+        window.addEventListener('resize', processScroll, false);
+        processScroll();
+    }
+}
+
+sgParallax(document.querySelectorAll('.js-scrollUp'));
