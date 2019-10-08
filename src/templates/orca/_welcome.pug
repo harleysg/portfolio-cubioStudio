@@ -3,10 +3,15 @@ section.o-section(data-theme='gray')
         +headding('h1', 'Somos, un estudio de diseño Colombiano.', 'Creamos', 'productos digitales y marcas del futuro.')(class="js-scrollUp")
     +mega_headding('CubioStudio')
     .o-wrapper
-        div(class="blog-slider js-scrollUp")
+        div(class="c-multimedia" data-square='multimedia' data-shadow='true')
+            video(controls class="c-multimedia_video" poster='./images/projects/slider/1.jpg')
+                source(src="unit_unit/module_module/assets/videos/audioname.mp4" type="video/mp4")
+                | Your browser does not support the video element.
+        //- div(class="blog-slider")
             .blog-slider__wrp.swiper-wrapper
                 .blog-slider__item.swiper-slide
-                    .blog-slider__img: img(src='./images/projects/slider/1.jpg' alt='')
+                    .blog-slider__img
+                        //- img(src='./images/projects/slider/1.jpg' alt='')
                     .blog-slider__content: a(class="blog-slider__button js-link" href='orca.html') READ MORE
                 .blog-slider__item.swiper-slide
                     .blog-slider__img: img(src='./images/projects/slider/2.jpg' alt='')

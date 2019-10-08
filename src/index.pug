@@ -2,11 +2,12 @@ include ./templates/_mixin
 <!DOCTYPE html>
 html(lang="en")
     block config
-        -var data = 'lol'
+        -var mainClass = 'on-index'
+        -var data = 'index'
         -var menu = [ {"link": '#about', "text": 'nosotros'}, {"link": '#works', "text": 'trabajos'}, {"link": '#enfoque', "text": 'enfoque'}, {"link": '#contact', "text": 'contacto'}]
         include ./templates/_head
     body
-        main(id="app" class="o-main")
+        main(id="app" class="o-main"+' '+mainClass)
             include ./templates/_header
             |
             include ./templates/index/_welcome

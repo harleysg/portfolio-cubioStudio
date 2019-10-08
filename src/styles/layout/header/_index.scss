@@ -4,14 +4,21 @@
         position: fixed;
         z-index: 10;
         top: 0;
-        left: 0;
+        left: 50%;
         width: 100%;
         min-height: 3rem;
-        padding: 2rem 6vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        transform: translateX(-50%);
+        padding: 1rem 6vw;
         background-color: var(--theme-header-bg);
+        // background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 10px 11px rgba(0, 0, 0, 0.11);
+        &_wrapper {
+            max-width: 1920px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
         &_btn {
             background-color: transparent;
             min-height: 3rem;

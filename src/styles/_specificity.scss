@@ -10,7 +10,7 @@
         --theme-section-bg: var(--color-a);
         --theme-headding-enfasis: var(--color-w);
         --theme-headding-separador: var(--color-w);
-        --theme-card-before-border-bg: var(--color-1);
+        --theme-card-before-border-bg: var(--color-c);
         --theme-mega-headding-color: #f4c82a;
         --theme-mega-headding-shadow: 30, 30, 30;
     }
@@ -35,6 +35,9 @@
         --theme-headding-separador: var(--color-a);
         .c-section_headding {
         }
+    }
+    &#contact {
+        margin-top: 100px;
     }
 }
 

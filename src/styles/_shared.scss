@@ -8,3 +8,9 @@
 @mixin fontBold() {
     // font-weight: bold;
 }
+
+@mixin bgGradient($color1, $color2, $size) {
+    background: linear-gradient(to right, $color1 0, $color1) top no-repeat, linear-gradient(to left, $color2 0%, $color2) bottom no-repeat, linear-gradient(to bottom, $color1 0, $color1 33.3%, $color2 77%, $color2) left no-repeat,
+        linear-gradient(to bottom, $color1 0, $color1 33.3%, $color2 77%, $color2) right no-repeat;
+    background-size: 100% $size, 100% $size, $size 100%, $size 100%;
+}
