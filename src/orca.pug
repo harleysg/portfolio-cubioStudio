@@ -1,0 +1,24 @@
+include ./templates/_mixin
+<!DOCTYPE html>
+html(lang="en")
+    block config
+        -var data = 'lol'
+        -var menu = [ {"link": '#about', "text": 'nosotros'}, {"link": '#works', "text": 'trabajos'}, {"link": '#enfoque', "text": 'enfoque'}, {"link": '#contact', "text": 'contacto'}]
+        include ./templates/_head
+    body
+        main(id="app" class="o-main")
+            include ./templates/_header
+            |
+            include ./templates/orca/_welcome
+            |
+            include ./templates/index/_founders
+            |
+            include ./templates/index/_contact
+            |
+            |
+            include ./templates/_footer
+            |
+        div(class="mouse-tracker")
+        |
+        |
+        include ./templates/_append

@@ -1,0 +1,18 @@
+section.o-section(data-theme='gray')
+    .o-wrapper
+        +headding('h1', 'Somos, un estudio de diseño Colombiano.', 'Creamos', 'productos digitales y marcas del futuro.')(class="js-scrollUp")
+    +mega_headding('CubioStudio')
+    .o-wrapper
+        div(class="blog-slider js-scrollUp")
+            .blog-slider__wrp.swiper-wrapper
+                .blog-slider__item.swiper-slide
+                    .blog-slider__img: img(src='./images/projects/slider/1.jpg' alt='')
+                    .blog-slider__content: a(class="blog-slider__button js-link" href='orca.html') READ MORE
+                .blog-slider__item.swiper-slide
+                    .blog-slider__img: img(src='./images/projects/slider/2.jpg' alt='')
+                    .blog-slider__content: a(class="blog-slider__button js-link" href='#') READ MORE
+                .blog-slider__item.swiper-slide
+                    .blog-slider__img: img(src='./images/projects/slider/3.jpg' alt='')
+                    .blog-slider__content: a(class="blog-slider__button js-link" href='#') READ MORE
+            .blog-slider__pagination
+            |
