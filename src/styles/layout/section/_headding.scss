@@ -6,7 +6,7 @@
     font-family: var(--font-medium);
     font-size: 74px;
     letter-spacing: -3.5px;
-    padding: 0 5px;
+    padding: 0 100px;
     position: relative;
     z-index: 1;
     margin-top: 0;
@@ -31,10 +31,10 @@
 }
 .o- {
     &mega_headding {
-        font-size: 610px;
+        font-size: 450px;
         font-family: var(--font-medium);
-        color: #f3f3f3;
-        text-shadow: 0 0 30px #e0e0e0;
+        color: var(--theme-mega-headding-color);
+        text-shadow: -25px 25px 40px rgba(var(--theme-mega-headding-shadow), 0.1);
         position: relative;
         left: 6vmin;
         &-wrapper {

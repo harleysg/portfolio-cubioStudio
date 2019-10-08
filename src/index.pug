@@ -9,321 +9,42 @@ html(lang="en")
         main(id="app" class="o-main")
             include ./templates/_header
             |
-            section.o-section(data-theme='gray')
-                .o-wrapper
-                    +headding('h1', 'Somos, un estudio de diseño Colombiano.', 'Creamos', 'productos digitales y marcas del futuro.')(class="js-scrollUp")
-                .o-wrapper: +chevron()
-                +mega_headding('CubioStudio')
+            include ./templates/index/_welcome
             |
+            include ./templates/index/_works
             |
-            section.o-section(data-theme='gold' id="enfoque")(style="display: flex;")
-                .o-wrapper
-                    .blog-slider
-                        .blog-slider__wrp.swiper-wrapper
-                            .blog-slider__item.swiper-slide
-                                .blog-slider__img: img(src='https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg' alt='')
-                                .blog-slider__content: a.blog-slider__button(href='#') READ MORE
-                            .blog-slider__item.swiper-slide
-                                .blog-slider__img: img(src='https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/jason-leung-798979-unsplash.jpg' alt='')
-                                .blog-slider__content: a.blog-slider__button(href='#') READ MORE
-                            .blog-slider__item.swiper-slide
-                                .blog-slider__img: img(src='https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/alessandro-capuzzi-799180-unsplash.jpg' alt='')
-                                .blog-slider__content: a.blog-slider__button(href='#') READ MORE
-                        .blog-slider__pagination
-            section.o-section(data-theme='light' id="works")
-                .o-wrapper
-                    +headding('h1', 'Somos, un estudio de diseño Colombiano.', 'Creamos', 'productos digitales y marcas del futuro.')(class="js-scrollUp")
-
+            include ./templates/index/_enfoque
             |
-            section.o-section(data-theme='light' id="about")
-                .o-wrapper
+            //- include ./templates/index/_about
             |
-            section.o-section(data-theme='dark' id="contact")
-                .o-wrapper
+            include ./templates/index/_founders
+            |
+            include ./templates/index/_contact
+            |
             |
             include ./templates/_footer
             |
-            div(class="mouse-tracker")
+        div(class="mouse-tracker")
+        |
+        |
         include ./templates/_append
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js")
-    script.
-        var swiper = new Swiper('.blog-slider', {
-            spaceBetween: 30,
-            effect: 'fade',
-            loop: true,
-            mousewheel: {
-                invert: false,
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            // autoHeight: true,
-            pagination: {
-                el: '.blog-slider__pagination',
-                clickable: true,
-            }
-        });
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css")
-    style.
-
-        .blog-slider {
-            width: 100%;
-            position: relative;
-            max-width: 1200px;
-            margin: auto;
-            background: #fff;
-            box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-            padding: 0px;
-            border-radius: 25px;
-            height: 600px;
-            transition: all .3s;
-            margin-top: -90px;
-        }
-        /*@media screen and (max-width: 992px) {
-        .blog-slider {
-            max-width: 680px;
-            height: 400px;
-        }
-        }
-        @media screen and (max-width: 768px) {
-        .blog-slider {
-            min-height: 500px;
-            height: auto;
-            margin: 180px auto;
-        }
-        }
-        @media screen and (max-height: 500px) and (min-width: 992px) {
-        .blog-slider {
-            height: 350px;
-        }
-        }*/
-        .blog-slider__item {
-        display: flex;
-        align-items: center;
-        }
-        /*@media screen and (max-width: 768px) {
-        .blog-slider__item {
-            flex-direction: column;
-        }
-        }*/
-        .blog-slider__item.swiper-slide-active .blog-slider__img img {
-        opacity: 1;
-        transition-delay: .3s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > * {
-        opacity: 1;
-        transform: none;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
-        transition-delay: 0.3s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(2) {
-        transition-delay: 0.4s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(3) {
-        transition-delay: 0.5s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(4) {
-        transition-delay: 0.6s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(5) {
-        transition-delay: 0.7s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(6) {
-        transition-delay: 0.8s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(7) {
-        transition-delay: 0.9s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(8) {
-        transition-delay: 1s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(9) {
-        transition-delay: 1.1s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(10) {
-        transition-delay: 1.2s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(11) {
-        transition-delay: 1.3s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(12) {
-        transition-delay: 1.4s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(13) {
-        transition-delay: 1.5s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(14) {
-        transition-delay: 1.6s;
-        }
-        .blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(15) {
-        transition-delay: 1.7s;
-        }
-        .blog-slider__img {
-            width: 100%;
-            height: 100%;
-            flex-shrink: 0;
-            background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
-            box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
-            border-radius: 0;
-            transform: translateX(0px);
-            overflow: hidden;
-        }
-        .blog-slider__img:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
-            border-radius: 0;
-            opacity: 0.8;
-        }
-        .blog-slider__img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            opacity: 0;
-            border-radius: 0;
-            transition: all .3s;
-        }
-        /*@media screen and (max-width: 768px) {
-        .blog-slider__img {
-            transform: translateY(-50%);
-            width: 90%;
-        }
-        }
-        @media screen and (max-width: 576px) {
-        .blog-slider__img {
-            width: 95%;
-        }
-        }
-        @media screen and (max-height: 500px) and (min-width: 992px) {
-        .blog-slider__img {
-            height: 270px;
-        }
-        }
-        .blog-slider__content {
-        padding-right: 25px;
-        }
-        @media screen and (max-width: 768px) {
-        .blog-slider__content {
-            margin-top: -80px;
-            text-align: center;
-            padding: 0 30px;
-        }
-        }
-        @media screen and (max-width: 576px) {
-        .blog-slider__content {
-            padding: 0;
-        }
-        }*/
-        .blog-slider__content > * {
-            opacity: 0;
-            transform: translateY(0);
-            transition: all .4s;
-        }
-        .blog-slider__code {
-            color: #7b7992;
-            margin-bottom: 15px;
-            display: block;
-            font-weight: 500;
-        }
-        .blog-slider__title {
-            font-size: 24px;
-            font-weight: 700;
-            color: #0d0925;
-            margin-bottom: 20px;
-        }
-        .blog-slider__text {
-            color: #4e4a67;
-            margin-bottom: 30px;
-            line-height: 1.5em;
-        }
-        .blog-slider__button {
-            display: inline-flex;
-            background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
-            padding: 15px 35px;
-            border-radius: 50px;
-            color: #fff;
-            box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
-            text-decoration: none;
-            font-weight: 500;
-            justify-content: center;
-            text-align: center;
-            letter-spacing: 1px;
-            position: absolute;
-            bottom: -30px;
-            right: -10px;
-        }
-        /*@media screen and (max-width: 576px) {
-            .blog-slider__button {
-                width: 100%;
-            }
-        }*/
-        .blog-slider .swiper-container-horizontal > .swiper-pagination-bullets, .blog-slider .swiper-pagination-custom, .blog-slider .swiper-pagination-fraction {
-            bottom: 10px;
-            left: 0;
-            width: 100%;
-        }
-        .blog-slider__pagination {
-            position: absolute;
-            z-index: 21;
-            right: 20px;
-            width: 100px !important;
-            text-align: center;
-            left: auto !important;
-            top: auto;
-            bottom: auto !important;
-            /*transform: translateY(-50%);
-            transform: translateX(-50%);*/
-            left: 0% !important;
-            bottom: 5px;
-            width: 100% !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        /*@media screen and (max-width: 768px) {
-        .blog-slider__pagination {
-            transform: translateX(-50%);
-            left: 50% !important;
-            top: 205px;
-            width: 100% !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        }*/
-        .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
-        margin: 8px;
-        }
-        /*@media screen and (max-width: 768px) {
-        .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
-            margin: 0 5px;
-        }
-        }*/
-        .blog-slider__pagination .swiper-pagination-bullet {
-            width: 11px;
-            height: 11px;
-            display: block;
-            border-radius: 10px;
-            background: #062744;
-            opacity: 0.2;
-            transition: all .3s;
-        }
-        .blog-slider__pagination .swiper-pagination-bullet-active {
-            opacity: 1;
-            background: #fd3838;
-            width: 30px;
-            box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
-        }
-        /*@media screen and (max-width: 768px) {
-        .blog-slider__pagination .swiper-pagination-bullet-active {
-            height: 11px;
-            width: 30px;
-        }
-        }
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css")
+        link(rel="stylesheet" href="./src/styles/components/_slider.css")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js")
+        script.
+            document.addEventListener('DOMContentLoaded', () => {
+                var swiper = new Swiper('.blog-slider', {
+                    spaceBetween: 60,
+                    effect: 'fade',
+                    loop: true,
+                    mousewheel: false,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.blog-slider__pagination',
+                        clickable: true,
+                    }
+                });
+            });

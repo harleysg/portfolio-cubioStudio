@@ -220,7 +220,7 @@ function sgParallax(stringElms) {
 
             if (scrt + win_h >= startY && scrt + win_h <= stopY) {
                 let percentage = (scrt + win_h - startY) / totalY;
-                let pTop = 90 * (1 - percentage);
+                let pTop = 100 * (1 - percentage);
                 let pTranslation = 'translate3d(0,' + pTop + 'px' + ',0)';
                 p.style.cssText = prefixCss_transform(pTranslation);
             }

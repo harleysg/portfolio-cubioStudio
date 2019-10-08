@@ -74,6 +74,7 @@
     align-items: center;
     width: 100%;
     height: $base * 10;
+    position: relative;
     &-arrow {
         position: absolute;
         top: -$base * 0.6;
