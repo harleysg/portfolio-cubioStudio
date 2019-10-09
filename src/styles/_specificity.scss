@@ -84,6 +84,11 @@
     transform: translateY(0px);
     transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98);
 }
+
+// .js-scrollUp {
+//     transform: translateY(50px) !important;
+//     transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98);
+// }
 .on-hover {
     transform: translateY(-10px) !important;
     transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98);

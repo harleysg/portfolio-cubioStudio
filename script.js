@@ -192,14 +192,86 @@ const mouseHovertatusOnDOM = ((arrStringsDOMSelectors) => {
 //     false
 // );
 
+function isAnyPartOfElementInViewport(el) {
+    if (el) {
+        const rect = el && el.getBoundingClientRect();
+        // DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+        // http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap
+        const vertInView = rect.top <= windowHeight && rect.top + rect.height >= 0;
+        const horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
+
+        return vertInView && horInView;
+    }
+}
+
+const isElmOnViewport = (el, callback, partOfElm = 0.6) => {
+    if (el) {
+        document.querySelectorAll(el).forEach((elm) => {
+            const elmTop = elm.getBoundingClientRect().top;
+            const wh = window.innerHeight * partOfElm;
+            callback && callback({ wh, elmTop, el: elm });
+            return { wh, elmTop, el: elm };
+        });
+    }
+};
+
+const isHeaderOverThemeElm = (scroll, arrStringsDOMSelectors) => {
+    const header = js_o_header;
+    arrStringsDOMSelectors.map((element) => {
+        element &&
+            document.querySelectorAll(element).forEach((_this) => {
+                const activeElm = isAnyPartOfElementInViewport(_this);
+                if (activeElm) {
+                    const theme = _this.dataset.theme;
+                    if (scroll + header.offsetHeight >= _this.offsetTop) {
+                        switch (theme) {
+                            case 'dark':
+                                header.dataset.over = `on-${theme}`;
+                                break;
+                            case 'gold':
+                                header.dataset.over = `on-${theme}`;
+                                break;
+                            case 'gray':
+                                header.dataset.over = `on-${theme}`;
+                                break;
+                            case 'light':
+                                header.dataset.over = `on-${theme}`;
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+            });
+    });
+};
+
 document.addEventListener(
     'scroll',
     (e) => {
         const mega_heading = document.querySelector('.js-mega_headding');
-        let scrt = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        let scrollSize = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const header = js_o_header;
+        isElmOnViewport(
+            '.js-scrollUp',
+            (baz) => {
+                // baz.elmTop <= baz.wh && baz.el.classList.add('on-hover');
+                // isAnyPartOfElementInViewport;
+            },
+            0.85
+        );
+
+        isHeaderOverThemeElm(scrollSize, ['[data-theme="gold"]', '[data-theme="gray"]', '[data-theme="light"]', '[data-theme="dark"]']);
+
+        // let themeGoldIsVisible = isAnyPartOfElementInViewport(document.querySelector('[data-theme="gold"]'));
+        scrollSize >= windowHeight / 3 ? header.classList.add('is-scrolled') : header.classList.remove('is-scrolled');
 
         setTimeout(() => {
-            mega_heading ? (mega_heading.style.left = `-${scrt / 2}px`) : null;
+            mega_heading ? (mega_heading.style.left = `-${scrollSize / 2}px`) : null;
         }, 90);
     },
     true
