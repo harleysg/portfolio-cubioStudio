@@ -28,10 +28,30 @@
             &-item {
                 list-style-type: none;
                 font-family: var(--font-medium);
+                position: relative;
+                padding-bottom: 3px;
+                display: inline-flex;
+                overflow: hidden;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: auto;
+                    bottom: 3px;
+                    left: -100%;
+                    background-color: var(--color-a);
+                    width: 100%;
+                    height: 3px;
+                    transition: left 0.5s cubic-bezier(0.37, 0.01, 0, 0.98);
+                }
+                &:hover {
+                    &::after {
+                        left: -13%;
+                    }
+                }
             }
             &-link {
                 text-decoration: none;
-                text-decoration-color: var(--color-a);
+                color: var(--color-a);
             }
         }
     }

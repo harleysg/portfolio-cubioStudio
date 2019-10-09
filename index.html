@@ -37,10 +37,10 @@
               </svg>
             </button>
             <ul class="o-menu_options">
-              <li class="o-menu_options-item js-menu"><a href="#about">nosotros</a></li>
-              <li class="o-menu_options-item js-menu"><a href="#works">trabajos</a></li>
-              <li class="o-menu_options-item js-menu"><a href="#enfoque">enfoque</a></li>
-              <li class="o-menu_options-item js-menu"><a href="#contact">contacto</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#about">nosotros</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#works">trabajos</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#enfoque">enfoque</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#contact">contacto</a></li>
             </ul>
           </nav>
         </div>
@@ -69,7 +69,7 @@
           </h1>
         </div>
         <div class="o-wrapper">
-          <div class="blog-slider js-scrollUp">
+          <div class="blog-slider js-mouseStatus">
             <div class="blog-slider__wrp swiper-wrapper">
               <div class="blog-slider__item swiper-slide">
                 <div class="blog-slider__img"><img src="./images/projects/slider/1.jpg" alt=""/></div>
@@ -133,9 +133,9 @@
           <figure class="c-card js-scrollUp">
             <div class="c-card_content">
               <figcaption class="c-card_caption">
-                <h4 class="c-card_caption-title" style="margin-bottom: 10px; color: var(--color-a)">Harley Santos Garzón</h4><small>CTO - Ingeniero UX</small>
-                <p>Productor multimedia, diseñador gráfico y desarrollador Frontend, Músico empirico y bajista de corazón.</p><br/><br/>
-                <div><small><a class="js-link" style="color: var(--color-a)" href="mailto:harley.santos.garzon@gmail.com">harley.garzon@cubiostudio.com</a></small></div>
+                <h4 class="c-card_caption-title" style="margin-bottom: 10px; color: var(--color-a)">Harley Santos Garzón</h4><small>CTO - Desarrollador frontend</small>
+                <p>Productor multimedia, diseñador gráfico y desarrollador Frontend, Músico empirico y bajista de corazón.</p>
+                <div><small><a class="c-card_link-email js-mouseStatus js-link" href="mailto:harley.santos.garzon@gmail.com">harley.garzon@cubiostudio.com</a></small></div>
               </figcaption>
             </div><img class="c-card_image" src="./images/founders/founder_1.jpeg" alt="Harley Santos Garzón"/>
           </figure>
@@ -143,8 +143,8 @@
             <div class="c-card_content">
               <figcaption class="c-card_caption">
                 <h4 class="c-card_caption-title" style="margin-bottom: 10px; color: var(--color-a)">Ángela María Bohórquez Ramos</h4><small>Dirección arte.</small>
-                <p>Productora multimedia, diseñadora gráfica. Animalista y amante de los perritos pequeños y blanquitos. Apoya causas ambientales.</p><br/><br/>
-                <div><small><a class="js-link" href="mailto:angela.bohorquez.ramos@gmail.com">angela.bohorquez@cubiostudio.com</a></small></div>
+                <p>Productora multimedia, diseñadora gráfica. Animalista y amante de los perritos pequeños y blanquitos. Apoya causas ambientales.</p>
+                <div><small><a class="c-card_link-email js-mouseStatus js-link" href="mailto:angela.bohorquez.ramos@gmail.com">angela.bohorquez@cubiostudio.com</a></small></div>
               </figcaption>
             </div>
           </figure>
@@ -153,7 +153,7 @@
               <figcaption class="c-card_caption">
                 <h4 class="c-card_caption-title" style="margin-bottom: 10px; color: var(--color-a)">David Duque Orozco</h4><small>Diseñador UX /UX.</small>
                 <p>Diseñador gráfico, motociclista de corazón. Le gusta trasnochar y ver series.</p>
-                <div><small><a class="js-link" href="mailto:angela.bohorquez.ramos@gmail.com">david.orozco@cubiostudio.com</a></small></div>
+                <div><small><a class="c-card_link-email js-mouseStatus js-link" href="mailto:angela.bohorquez.ramos@gmail.com">david.orozco@cubiostudio.com</a></small></div>
               </figcaption>
             </div>
           </figure>
@@ -205,7 +205,6 @@
     
     <script src="./script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"/>
-    <link rel="stylesheet" href="./src/styles/components/_slider.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {

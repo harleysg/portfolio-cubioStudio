@@ -160,6 +160,29 @@ const mouseTrackStatusOnDOM = ((arrStringsDOMSelectors) => {
     });
 })(['.js-mask', '.js-menu', '.js-logo', '.js-link', '[data-theme]']);
 /* ---------------------------------- */
+const mouseHoverStatus = (e) => {
+    const type = e.event.type;
+    const target = e.event.target;
+    const leaveClass = 'on-leave';
+    const enterClass = 'on-hover';
+    if (type == 'mouseenter') {
+        target.classList.add(enterClass);
+        target.classList.remove(leaveClass);
+    }
+    if (type == 'mouseleave') {
+        target.classList.remove(enterClass);
+        target.classList.add(leaveClass);
+    }
+};
+/* ---------------------------------- */
+const mouseHovertatusOnDOM = ((arrStringsDOMSelectors) => {
+    arrStringsDOMSelectors.map((elm) => {
+        new AddEvent(elm, 'mouseenter', mouseHoverStatus);
+        new AddEvent(elm, 'mouseleave', mouseHoverStatus);
+    });
+})(['.c-card', '.c-btn', '.js-mouseStatus']);
+
+/* ---------------------------------- */
 // const classOnWheelEnd = new WheelEnd(
 //     (cb) => {
 //         //onMaskEffect.init(cb.event);

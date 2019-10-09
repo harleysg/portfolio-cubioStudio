@@ -1,134 +1,13 @@
 @charset "utf-8";
 
-.svg-section_1_heading {
-    margin-top: 112px;
-    .foreign-title {
-        margin: 0;
-        font-size: 57px;
-        letter-spacing: -3px;
-        line-height: 68px;
-        span {
-            color: var(--color-a);
-        }
-    }
-    .st0 {
-        fill: #1f1f1f;
-    }
-
-    .st1 {
-        // font-family: var(--font-bold);
-    }
-
-    .st2 {
-        font-size: 16px;
-    }
-
-    .st3 {
-        fill: #fcc301;
-    }
-
-    .st4 {
-        fill: none;
-    }
-
-    .st5 {
-        fill: #fdc401;
-    }
-
-    .st6 {
-        font-size: 57px;
-    }
-
-    .st7 {
-        letter-spacing: -2px;
-    }
-}
-.svg-main_title {
-    .cls-1 {
-        fill: none;
-    }
-    .cls-2 {
-        fill: #242424;
-    }
-    .cls-3 {
-        font-size: 131px;
-        font-family: var(--font-bold);
-        @include fontBold();
-        font-weight: 700;
-        letter-spacing: -0.03em;
-    }
-    .cls-3,
-    .cls-6 {
-        fill: #383838;
-    }
-    .cls-4 {
-        letter-spacing: -0.04em;
-    }
-    .cls-5 {
-        letter-spacing: -0.03em;
-    }
-    .cls-6 {
-        font-size: 34px;
-        font-family: var(--font-medium);
-        @include fontBold();
-        font-weight: 500;
-        letter-spacing: -0.04em;
-    }
-    .cls-7 {
-        letter-spacing: -0.03em;
-    }
-    .cls-8 {
-        letter-spacing: -0.06em;
-    }
-    .cls-9 {
-        letter-spacing: -0.05em;
-    }
-    .cls-10 {
-        letter-spacing: -0.03em;
-    }
-    .cls-11 {
-        letter-spacing: -0.05em;
-    }
-    .cls-12 {
-        letter-spacing: -0.09em;
-    }
-}
-
 .svg-menu {
     & .cls-1 {
         fill: #383838;
     }
 }
 
-.svg-logo .st0 {
-    fill: #222220;
-}
-
-.svg-mensaje {
-    a {
-        fill: var(--color-a);
-    }
-    .cls-1,
-    .cls-5 {
-        font-size: 116px;
-        font-family: var(--font-bold), roboto;
-        @include fontBold();
-        font-weight: 700;
-        letter-spacing: -0.03em;
-    }
-    .cls-1 {
-        fill: #fff;
-    }
-    .cls-2 {
-        letter-spacing: -0.05em;
-    }
-    .cls-3 {
-        letter-spacing: -0.03em;
-    }
-    .cls-4 {
-        letter-spacing: -0.06em;
-    }
-    .cls-5 {
-        fill: #eec32e;
+.svg-logo {
+    .st0 {
+        fill: #222220;
     }
 }
