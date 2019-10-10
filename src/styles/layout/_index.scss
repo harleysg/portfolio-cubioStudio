@@ -13,7 +13,7 @@
     }
     &menu {
         width: 100%;
-        max-width: 400px;
+        max-width: 500px;
         &_btn {
             @extend .o-header_btn;
             max-width: 3rem;
@@ -51,7 +51,8 @@
             }
             &-link {
                 text-decoration: none;
-                color: var(--color-a);
+                color: var(--theme-menu-link-color);
+                transition: color 0.5s;
             }
         }
     }
