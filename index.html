@@ -222,16 +222,12 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
           var swiper = new Swiper('.blog-slider', {
-              spaceBetween: 60,
+              spaceBetween: 90,
               effect: 'fade',
               loop: true,
               mousewheel: false,
-              navigation: {
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
-              },
               autoplay: {
-                  delay: 5000,
+                  delay: 10000,
                   disableOnInteraction: false,
               },
               pagination: {

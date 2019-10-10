@@ -8,6 +8,6 @@
 
 .svg-logo {
     .st0 {
-        fill: #222220;
+        fill: var(--theme-svg-logo-fill); //#222220;
     }
 }

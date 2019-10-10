@@ -5,10 +5,10 @@
     --easing: cubic-bezier(0.2, 0, 0.3, 1);
     --theme-contrast: #323232;
     --color-w: #ffffff;
+    --color-b: #141414;
     --color-0: #f5f5f5;
     --color-1: #323232;
     --color-a: #eec32e; //#bc5ff1;
-    --color-b: #fdc400; //#7842e6;
     --color-c: #fe8a39; //#3a1a7b;
 
     --theme-header-bg: rgba(255, 255, 255, 0.4);
@@ -17,9 +17,12 @@
     --theme-section-bg: var(--color-w);
     --theme-headding-enfasis: var(--color-a);
     --theme-headding-separador: var(--color-a);
+    --theme-headding-indicator: var(--color-b);
 
     --theme-card-content-bg: var(--color-w);
     --theme-card-before-border-bg: var(--color-1);
+
+    --theme-svg-logo-fill: var(--color-1);
 
     --theme-mega-headding-color: var(--color-w);
     --theme-mega-headding-shadow: 0, 0, 0;

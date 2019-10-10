@@ -44,7 +44,7 @@
         width: var(--size-active);
         height: var(--size-active);
         cursor: pointer;
-        background-image: linear-gradient(460deg, var(--color-a), var(--color-b));
+        background-image: linear-gradient(460deg, var(--color-a), var(--color-a));
         opacity: 0.5;
         &::after,
         &::before {

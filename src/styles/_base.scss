@@ -5,20 +5,12 @@
     box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-bold);
-}
-
 html {
     font-family: var(--font-normal), Roboto, Helvetica, sans-serif;
     font-size: 20px;
     height: 100%;
     width: 100%;
+    color: var(--color-b);
 }
 body {
     display: flex;
@@ -32,6 +24,15 @@ body {
     font-size: inherit;
     background-color: #fff;
     cursor: initial;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-bold);
 }
 
 img {

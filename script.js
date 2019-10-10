@@ -220,6 +220,7 @@ const isElmOnViewport = (el, callback, partOfElm = 0.6) => {
 
 const isHeaderOverThemeElm = (scroll, arrStringsDOMSelectors) => {
     const header = js_o_header;
+    const html = document.body.parentElement;
     arrStringsDOMSelectors.map((element) => {
         element &&
             document.querySelectorAll(element).forEach((_this) => {
@@ -230,15 +231,19 @@ const isHeaderOverThemeElm = (scroll, arrStringsDOMSelectors) => {
                         switch (theme) {
                             case 'dark':
                                 header.dataset.over = `on-${theme}`;
+                                html.dataset.theme = `${theme}`;
                                 break;
                             case 'gold':
                                 header.dataset.over = `on-${theme}`;
+                                html.dataset.theme = `${theme}`;
                                 break;
                             case 'gray':
                                 header.dataset.over = `on-${theme}`;
+                                html.dataset.theme = `${theme}`;
                                 break;
                             case 'light':
                                 header.dataset.over = `on-${theme}`;
+                                html.dataset.theme = `${theme}`;
                                 break;
                             default:
                                 break;
