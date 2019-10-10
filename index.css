@@ -71,7 +71,7 @@ strong, b { font-family: var(--font-bold); }
 
 .o-menu_options { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; margin: 0; padding: 0; }
 
-.o-menu_options-item { list-style-type: none; font-family: var(--font-medium); position: relative; padding-bottom: 3px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; overflow: hidden; }
+.o-menu_options-item { list-style-type: none; font-family: var(--font-medium); position: relative; padding-bottom: 3px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; overflow: hidden; text-transform: uppercase; font-size: 0.72rem; }
 
 .o-menu_options-item::after { content: ''; position: absolute; top: auto; bottom: 3px; left: -100%; background-color: var(--color-a); width: 100%; height: 3px; -webkit-transition: left 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); -o-transition: left 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); transition: left 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); }
 
@@ -372,6 +372,8 @@ strong, b { font-family: var(--font-bold); }
 
 .on-hover { -webkit-transform: translateY(-10px) !important; -ms-transform: translateY(-10px) !important; transform: translateY(-10px) !important; -webkit-transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); -o-transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); }
 
+.on-orca .o-menu { max-width: 600px; }
+
 .on-orca #welcome .cont-multimedia { margin-top: 100px; }
 
 .on-orca #record { min-height: 75vh; }
@@ -397,6 +399,38 @@ strong, b { font-family: var(--font-bold); }
 .on-orca .o-section img { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; }
 
 .on-orca .o-section:first-of-type .o-wrapper { margin-top: 18vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.on-betsknate .o-menu { max-width: 600px; }
+
+.on-betsknate #welcome .cont-multimedia { margin-top: 100px; }
+
+.on-betsknate #record { min-height: 75vh; }
+
+.on-betsknate #preview { position: relative; }
+
+.on-betsknate #preview img { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.on-betsknate #preview:before, .on-betsknate #preview:after { content: ''; position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; top: 0; }
+
+.on-betsknate #preview:after { background-image: url(images/projects/betsknate/betsknate_proposal_bg_2.png); background-size: auto 66%; background-position: 80% 90%; }
+
+.on-betsknate #preview:before { background-image: url(images/projects/betsknate/betsknate_proposal_bg.png); background-size: auto 66%; background-position: 50% center; opacity: 0.6; }
+
+.on-betsknate #colors { position: relative; }
+
+.on-betsknate #colors:before { content: ''; position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(images/projects/betsknate/betsknate_colores_bg.png); background-size: auto 66%; background-position: -30% center; }
+
+.on-betsknate #elements { position: relative; }
+
+.on-betsknate #elements:before { content: ''; position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(images/projects/betsknate/betsknate_elementos_bg.png); background-size: auto 23%; background-position: 76% 26%; }
+
+.on-betsknate #aplicaciones { position: relative; }
+
+.on-betsknate #aplicaciones:before { position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(images/projects/betsknate/betsknate_aplicaciones.png); background-size: auto 34%; background-position: 88% center; }
+
+.on-betsknate .o-section img { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; }
+
+.on-betsknate .o-section:first-of-type .o-wrapper { margin-top: 18vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 @-webkit-keyframes animateSize { to { width: 85vw;
     height: 85vh; } }

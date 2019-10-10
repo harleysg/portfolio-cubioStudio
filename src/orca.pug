@@ -4,7 +4,7 @@ html(lang="en")
     block config
         -var mainClass = 'on-orca'
         -var data = 'Proyecto Orca'
-        -var menu = [ {"link": './', "text": 'inicio'}, {"link": '#about', "text": 'nosotros'}, {"link": '#works', "text": 'trabajos'}, {"link": '#enfoque', "text": 'enfoque'}, {"link": '#contact', "text": 'contacto'}]
+        -var menu = [ {"link": './', "text": 'inicio'},  {"link": '#preview', "text": 'marca'}, {"link": '#proposal', "text": 'propuesta'}, {"link": '#objectives', "text": 'objetivos'}, {"link": '#isotipo', "text": 'abstracción'}, {"link": '#contact', "text": 'contacto'}]
         include ./templates/_head
     body
         main(id="app" class="o-main"+' '+mainClass)
@@ -23,6 +23,8 @@ html(lang="en")
             include ./templates/orca/_isotipo
             |
             include ./templates/orca/_tipografia
+            |
+            include ./templates/orca/_contact
             |
             include ./templates/_footer
             |

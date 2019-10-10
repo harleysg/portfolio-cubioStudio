@@ -32,6 +32,8 @@
                 padding-bottom: 3px;
                 display: inline-flex;
                 overflow: hidden;
+                text-transform: uppercase;
+                font-size: 0.72rem;
                 &::after {
                     content: '';
                     position: absolute;

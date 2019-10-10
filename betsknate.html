@@ -4,12 +4,12 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>index</title>
+    <title>Betsknate</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
     <link rel="stylesheet" href="./index.css"/>
   </head>
   <body>
-    <main class="o-main on-index" id="app">
+    <main class="o-main on-betsknate" id="app">
       <header class="o-header" id="js_o_header">
         <div class="o-header_wrapper">
           <button class="o-header_btn o-logo js-logo">
@@ -37,135 +37,85 @@
               </svg>
             </button>
             <ul class="o-menu_options">
-              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#about">nosotros</a></li>
-              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#works">trabajos</a></li>
-              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#enfoque">enfoque</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="./">inicio</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#proposal">marca</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#colors">colores</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#elements">elementos</a></li>
+              <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#aplicaciones">aplicaciones</a></li>
               <li class="o-menu_options-item js-menu"><a class="o-menu_options-link" href="#contact">contacto</a></li>
             </ul>
           </nav>
         </div>
       </header>
-      <section class="o-section" data-theme="gray">
+      <section class="o-section" data-theme="gray" id="welcome">
         <div class="o-wrapper">
-          <h1 class="c-section_headding"><small class="c-section_headding-indicator">Somos, un estudio de diseño Colombiano.</small>
-            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Creamos</span> productos digitales y marcas del futuro.
+          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator"></small>
+            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Betsknate</span> carnaval del perdón
           </h1>
-        </div>
-        <div class="o-wrapper">
-          <div class="u-chevron">
-            <div class="chevron u-chevron-arrow"></div>
-            <div class="chevron u-chevron-arrow"></div>
-            <div class="chevron u-chevron-arrow"></div>
-          </div>
+          <blockquote class="c-welcome_message">
+            <p>Diseño y construcción de marca, piezas para difusión turística, material POP.</p>
+            <div class="c-welcome_details">
+              <div><strong>Industria: </strong><span>Turística</span></div>
+              <div><strong>Año: </strong><span>2016</span></div>
+            </div>
+          </blockquote>
         </div>
         <div class="o-mega_headding-wrapper">
-          <div class="o-mega_headding js-mega_headding">CubioStudio</div>
+          <div class="o-mega_headding js-mega_headding">Betsknate</div>
         </div>
       </section>
-      <section class="o-section" id="works" data-theme="light">
+      <section class="o-section" data-theme="gray" id="record">
         <div class="o-wrapper">
-          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">trabajos, desde 2015 haciendo realidad las ideas de nuestros clientes.</small>
-            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Proyectos</span> 
-          </h1>
-        </div>
-        <div class="o-wrapper js-scrollUp">
-          <div class="blog-slider js-mouseStatus">
-            <div class="blog-slider__wrp swiper-wrapper">
-              <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img"><img src="./images/projects/slider/1.jpg" alt=""/></div>
-                <div class="blog-slider__content"><a class="blog-slider__button js-link" href="orca.html">Conoce Orca</a></div>
-              </div>
-              <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img"><img src="./images/projects/slider/2.jpg" alt=""/></div>
-                <div class="blog-slider__content"><a class="blog-slider__button js-link" href="origen.html">Conoce Origen</a></div>
-              </div>
-              <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img"><img src="./images/projects/slider/4.jpg" alt=""/></div>
-                <div class="blog-slider__content"><a class="blog-slider__button js-link" href="betsknate.html">Conoce Betsknate</a></div>
-              </div>
-              <div class="blog-slider__item swiper-slide">
-                <div class="blog-slider__img"><img src="./images/projects/slider/3.jpg" alt=""/></div>
-                <div class="blog-slider__content"><a class="blog-slider__button js-link" href="valientes.html">Conoce Valientes</a></div>
-              </div>
+          <div class="cont-multimedia">
+            <div class="c-multimedia" data-square="multimedia" data-shadow="true">
+              <video class="c-multimedia_video" controls="controls" poster="./images/projects/slider/4.jpg">
+                <source src="multimedia/videos/orca/reel.mp4" type="video/mp4"/>Your browser does not support the video element.
+              </video>
             </div>
-            <div class="blog-slider__pagination"></div>
-            <!-- Add Arrows-->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
-      <section class="o-section" id="enfoque" data-theme="gold">
+      <section class="o-section" data-theme="gold" id="preview">
         <div class="o-wrapper">
-          <h2 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Enfoque, multiples servicios, 2 modalidades de trabajo</small>
-            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Impulsamos</span> transformaciones de la mano con el cliente.
-          </h2>
-        </div>
-        <article class="c-grid" data-grid="card">
-          <div class="c-card js-scrollUp">
-            <div class="c-card_content">
-              <h1 class="c-card_caption-title">Estratégia y consultoría</h1>
-              <figcaption class="c-card_caption">
-                <p class="c-card_description">Trabajo cercano con el cliente para realizar análisis y definir diagnostico y plan de acción.</p><a class="c-btn js-link" data-position="absolute" href="mailto:harley.santos.garzon@gmail.com">hablemos</a>
-              </figcaption>
-            </div>
-          </div>
-          <figure class="c-card js-scrollUp">
-            <div class="c-card_content">
-              <h1 class="c-card_caption-title">Diseño y desarrollo</h1>
-              <figcaption class="c-card_caption">
-                <p class="c-card_description">Resolver las necesidades tanto en el diseño, desarrollo y consultoría de la mano con e cliente.</p><a class="c-btn js-link" data-position="absolute" href="mailto:angela.bohorquez.ramos@gmail.com">hablemos</a>
-              </figcaption>
-            </div>
-          </figure>
-        </article>
-      </section>
-      <section class="o-section js-scrollUp" id="founders" data-theme="light">
-        <div class="o-wrapper">
-          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Nosotros, apasionados en lo que hacemos.</small>
-            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Interesados</span> en ser los mejores para nuestros clientes.
+          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Inicio,  lo que nos trajo aquí.</small>
+            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Sobre</span> Betsknate.
           </h1>
         </div>
-        <div class="o-wrapper">
-          <article class="o-article c-aboutUs">
-            <h2>Pasión</h2>
-            <p style="max-width: 800px;">Empresa colombiana creada por una pareja de diseñadores gráficos, creyentes de que emprender no es difícil pero no es una tarea para todos.</p>
-            <div style="max-width: 800px; margin-top: 200px;">
-              <h2 class="u-head_section js-scrollUp" data-name="Nuestro equipo">Nuestro equipo</h2>
-            </div>
-          </article>
-        </div>
-        <article class="c-grid" data-grid="founders">
-          <figure class="c-card js-scrollUp">
-            <div class="c-card_content">
-              <figcaption class="c-card_caption">
-                <h4 class="c-card_caption-title" style="margin-bottom: 10px; color: var(--color-a)">Harley Santos Garzón</h4><small>CTO - Desarrollador frontend</small>
-                <p>Productor multimedia, diseñador gráfico y desarrollador Frontend, Músico empirico y bajista de corazón.</p>
-                <div><small><a class="c-card_link-email js-mouseStatus js-link" href="mailto:harley.santos.garzon@gmail.com">harley.garzon@cubiostudio.com</a></small></div>
-              </figcaption>
-            </div><img class="c-card_image" src="./images/founders/founder_1.jpeg" alt="Harley Santos Garzón"/>
-          </figure>
-          <figure class="c-card js-scrollUp"><img class="c-card_image" src="./images/founders/founder_2.jpg" alt="Ángela María Bohórquez Ramos"/>
-            <div class="c-card_content">
-              <figcaption class="c-card_caption">
-                <h4 class="c-card_caption-title" style="margin-bottom: 10px; color: var(--color-a)">Ángela María Bohórquez Ramos</h4><small>Dirección arte.</small>
-                <p>Productora multimedia, diseñadora gráfica. Animalista y amante de los perritos pequeños y blanquitos. Apoya causas ambientales.</p>
-                <div><small><a class="c-card_link-email js-mouseStatus js-link" href="mailto:angela.bohorquez.ramos@gmail.com">angela.bohorquez@cubiostudio.com</a></small></div>
-              </figcaption>
-            </div>
-          </figure>
-          <figure class="c-card js-scrollUp"><img class="c-card_image" src="./images/founders/founder_3.jpg" alt="Ángela María Bohórquez Ramos"/>
-            <div class="c-card_content">
-              <figcaption class="c-card_caption">
-                <h4 class="c-card_caption-title" style="margin-bottom: 10px; color: var(--color-a)">David Duque Orozco</h4><small>Diseñador UX /UX.</small>
-                <p>Diseñador gráfico, motociclista de corazón. Le gusta trasnochar y ver series.</p>
-                <div><small><a class="c-card_link-email js-mouseStatus js-link" href="mailto:angela.bohorquez.ramos@gmail.com">david.orozco@cubiostudio.com</a></small></div>
-              </figcaption>
-            </div>
-          </figure>
-        </article>
+        <div class="o-wrapper"><img src="images/projects/betsknate/betsknate_preview.png" alt=""/></div>
       </section>
-      <section class="o-section js-scrollUp" id="contact" data-theme="dark">
+      <section class="o-section" data-theme="gray" id="proposal">
+        <div class="o-wrapper">
+          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Horizonte, lo que quisimos lograr.</small>
+            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Propuesta</span> de marca.
+          </h1>
+        </div>
+        <div class="o-wrapper"><img src="images/projects/betsknate/betsknate_propuesta.png" alt=""/></div>
+      </section>
+      <section class="o-section" data-theme="light" id="colors">
+        <div class="o-wrapper">
+          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Estética, parte visual.</small>
+            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Paleta</span> de colores.
+          </h1>
+        </div>
+        <div class="o-wrapper"><img src="images/projects/betsknate/betsknate_colores.png" alt="" draggable="false"/></div>
+      </section>
+      <section class="o-section" data-theme="gold" id="elements">
+        <div class="o-wrapper">
+          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Aspectos visuales.</small>
+            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Elementos</span> compositivos
+          </h1>
+        </div>
+        <div class="o-wrapper"><img src="images/projects/betsknate/betsknate_elementos.png" alt="" draggable="false"/></div>
+      </section>
+      <section class="o-section" data-theme="dark" id="aplicaciones">
+        <div class="o-wrapper">
+          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Aspectos visuales.</small>
+            <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Aplicaciones</span> 
+          </h1>
+        </div>
+        <div class="o-wrapper"><img src="images/projects/betsknate/betsknate_aplicaciones.png" alt="" draggable="false"/></div>
+      </section>
+      <section class="o-section js-scrollUp" id="contact" data-theme="light">
         <div class="o-wrapper">
           <h2 class="u-head_section" data-name="Contacto">Contacto</h2>
         </div>
@@ -197,7 +147,6 @@
           </div>
         </div>
       </section>
-      
       <footer class="o-footer">
         <div class="o-wrapper">
           <div class="c-contact_footer">
@@ -221,25 +170,5 @@
     <div class="mouse-tracker"></div>
     
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          var swiper = new Swiper('.blog-slider', {
-              spaceBetween: 90,
-              effect: 'fade',
-              loop: true,
-              mousewheel: false,
-              autoplay: {
-                  delay: 10000,
-                  disableOnInteraction: false,
-              },
-              pagination: {
-                  el: '.blog-slider__pagination',
-                  clickable: true,
-              }
-          });
-      });
-    </script>
   </body>
 </html>
