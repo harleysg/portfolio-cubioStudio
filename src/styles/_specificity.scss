@@ -2,7 +2,7 @@
 
 .o-section {
     &:first-of-type {
-        .c-section_headding {
+        .o-wrapper {
             margin-top: 18vh;
         }
     }
@@ -35,9 +35,6 @@
         --theme-headding-separador: var(--color-a);
         .c-section_headding {
         }
-    }
-    &#contact {
-        margin-top: 100px;
     }
 }
 
@@ -92,4 +89,21 @@
 .on-hover {
     transform: translateY(-10px) !important;
     transition: all 0.5s cubic-bezier(0.37, 0.01, 0, 0.98);
+}
+
+.on-orca {
+    #welcome {
+        .cont-multimedia {
+            margin-top: 100px;
+        }
+    }
+    .o-section {
+        &:first-of-type {
+            .o-wrapper {
+                margin-top: 18vh;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
 }

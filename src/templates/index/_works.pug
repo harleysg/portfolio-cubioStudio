@@ -1,7 +1,7 @@
-section(id="works" class="o-section js-scrollUp" data-theme="light")
+section(id="works" class="o-section" data-theme="light")
     .o-wrapper
         +headding('h1', 'trabajos, desde 2015 haciendo realidad las ideas de nuestros clientes.', 'Proyectos', null)(class="js-scrollUp")
-    .o-wrapper
+    .o-wrapper.js-scrollUp
         div(class="blog-slider js-mouseStatus")
             .blog-slider__wrp.swiper-wrapper
                 .blog-slider__item.swiper-slide
@@ -9,9 +9,12 @@ section(id="works" class="o-section js-scrollUp" data-theme="light")
                     .blog-slider__content: a(class="blog-slider__button js-link" href='orca.html') Conoce Orca
                 .blog-slider__item.swiper-slide
                     .blog-slider__img: img(src='./images/projects/slider/2.jpg' alt='')
-                    .blog-slider__content: a(class="blog-slider__button js-link" href='#') Conoce Origen
+                    .blog-slider__content: a(class="blog-slider__button js-link" href='origen.html') Conoce Origen
                 .blog-slider__item.swiper-slide
                     .blog-slider__img: img(src='./images/projects/slider/3.jpg' alt='')
-                    .blog-slider__content: a(class="blog-slider__button js-link" href='#') Conoce Valientes
+                    .blog-slider__content: a(class="blog-slider__button js-link" href='valientes.html') Conoce Valientes
             .blog-slider__pagination
+            // Add Arrows
+            div(class="swiper-button-prev")
+            div(class="swiper-button-next")
             |

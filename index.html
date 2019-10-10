@@ -62,13 +62,13 @@
           <div class="o-mega_headding js-mega_headding">CubioStudio</div>
         </div>
       </section>
-      <section class="o-section js-scrollUp" id="works" data-theme="light">
+      <section class="o-section" id="works" data-theme="light">
         <div class="o-wrapper">
           <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">trabajos, desde 2015 haciendo realidad las ideas de nuestros clientes.</small>
             <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Proyectos</span> 
           </h1>
         </div>
-        <div class="o-wrapper">
+        <div class="o-wrapper js-scrollUp">
           <div class="blog-slider js-mouseStatus">
             <div class="blog-slider__wrp swiper-wrapper">
               <div class="blog-slider__item swiper-slide">
@@ -77,14 +77,17 @@
               </div>
               <div class="blog-slider__item swiper-slide">
                 <div class="blog-slider__img"><img src="./images/projects/slider/2.jpg" alt=""/></div>
-                <div class="blog-slider__content"><a class="blog-slider__button js-link" href="#">Conoce Origen</a></div>
+                <div class="blog-slider__content"><a class="blog-slider__button js-link" href="origen.html">Conoce Origen</a></div>
               </div>
               <div class="blog-slider__item swiper-slide">
                 <div class="blog-slider__img"><img src="./images/projects/slider/3.jpg" alt=""/></div>
-                <div class="blog-slider__content"><a class="blog-slider__button js-link" href="#">Conoce Valientes</a></div>
+                <div class="blog-slider__content"><a class="blog-slider__button js-link" href="valientes.html">Conoce Valientes</a></div>
               </div>
             </div>
             <div class="blog-slider__pagination"></div>
+            <!-- Add Arrows-->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -97,7 +100,7 @@
         <article class="c-grid" data-grid="card">
           <div class="c-card js-scrollUp">
             <div class="c-card_content">
-              <h1 class="c-card_caption-title">Estrategia y consultoría</h1>
+              <h1 class="c-card_caption-title">Estratégia y consultoría</h1>
               <figcaption class="c-card_caption">
                 <p class="c-card_description">Trabajo cercano con el cliente para realizar análisis y definir diagnostico y plan de acción.</p><a class="c-btn js-link" data-position="absolute" href="mailto:harley.santos.garzon@gmail.com">hablemos</a>
               </figcaption>
@@ -194,10 +197,19 @@
       <footer class="o-footer">
         <div class="o-wrapper">
           <div class="c-contact_footer">
-            <label for=""><a class="js-link" style="color: var(--color-a);" href="mailto:harley.santos.garzon@gmail.com">hello@cubiostudio.com</a></label>
-            <label for=""><a class="js-link" style="color: var(--color-a)" href="tel:+350 5099 220">350 5099 220</a></label>
-            <hr style="width: 100%"/>
-            <label for="">Bogotá D.C, Colombia</label><small>&copy; 2019 cubio studio</small>
+            <div class="c-contact_footer_item"><a class="js-link" href="mailto:harley.santos.garzon@gmail.com">hello@cubiostudio.com</a></div>
+            <div class="c-contact_footer_item">
+              <label for=""><a class="js-link" href="tel:+350 5099 220">350 5099 220</a></label>
+            </div>
+            <div class="c-contact_footer_item">
+              <label for=""><a class="js-link" taget="_blank" href="https://www.instagram.com/cubioStudio/">instagram</a></label>
+              <label for=""><a class="js-link" taget="_blank" href="https://www.behance.net/HarleySantosGarzon">behance</a></label>
+              <label for=""><a class="js-link" taget="_blank" href="https://github.com/HarleySG/">github</a></label>
+            </div>
+            <div class="c-contact_footer_item">
+              <hr style="width: 100%"/>
+              <label for="">Bogotá D.C, Colombia</label><small>&copy; 2019 cubio studio</small>
+            </div>
           </div>
         </div>
       </footer>
@@ -214,6 +226,10 @@
               effect: 'fade',
               loop: true,
               mousewheel: false,
+              navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+              },
               autoplay: {
                   delay: 5000,
                   disableOnInteraction: false,

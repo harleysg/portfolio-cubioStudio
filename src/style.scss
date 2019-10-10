@@ -5,7 +5,7 @@
     --easing: cubic-bezier(0.2, 0, 0.3, 1);
     --theme-contrast: #323232;
     --color-w: #ffffff;
-    --color-0: #fefefe;
+    --color-0: #f5f5f5;
     --color-1: #323232;
     --color-a: #eec32e; //#bc5ff1;
     --color-b: #fdc400; //#7842e6;
@@ -20,6 +20,8 @@
 
     --theme-mega-headding-color: var(--color-w);
     --theme-mega-headding-shadow: 0, 0, 0;
+
+    --modal-border-size: 2px;
 
     --font-medium: AvenirNext-Medium, sans-serif;
     --font-bold: AvenirNext-Bold, sans-serif;

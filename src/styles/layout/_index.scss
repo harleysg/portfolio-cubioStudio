@@ -62,5 +62,12 @@
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+    &footer {
+        padding: 5vw 0 1vh;
+        width: 100%;
+        min-height: 300px;
     }
 }

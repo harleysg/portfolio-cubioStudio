@@ -5,7 +5,7 @@
     max-width: 1200px;
     margin: auto;
     background: #fff;
-    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    // box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
     padding: 0px;
     border-radius: 25px;
     height: 600px;
@@ -101,7 +101,7 @@
         padding: 15px 35px;
         border-radius: 0;
         color: var(--color-1);
-        box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
+        // box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
         text-decoration: none;
         font-weight: 500;
         justify-content: center;
@@ -124,24 +124,43 @@
             background-size: 100% var(--modal-border-size), 100% var(--modal-border-size), var(--modal-border-size) 100%, var(--modal-border-size) 100%;
         }
     }
-    & .swiper-container-horizontal > .swiper-pagination-bullets,
-    & .swiper-pagination-custom,
-    & .swiper-pagination-fraction {
-        // bottom: 10px;
-        // left: 0;
-        // width: 100%;
+    & .swiper-button-next,
+    .swiper-button-prev {
+        min-width: 21px;
+        width: auto;
+        min-height: 21px;
+        height: auto;
     }
+    & .swiper-button-next::before {
+        content: 'sig.';
+    }
+    & .swiper-button-prev::after {
+        content: 'prev.';
+    }
+
+    & .swiper-button-next {
+        padding-right: 1rem;
+        background-position: right;
+        right: -60px;
+    }
+
+    & .swiper-button-prev {
+        padding-left: 1rem;
+        background-position: left;
+        left: -60px;
+    }
+    // & .swiper-container-horizontal > .swiper-pagination-bullets,
+    // & .swiper-pagination-custom,
+    // & .swiper-pagination-fraction {
+    //     // bottom: 10px;
+    //     // left: 0;
+    //     // width: 100%;
+    // }
     &__pagination {
         position: absolute;
         z-index: 21;
-        // right: 20px;
-        // width: 100px !important;
         text-align: center;
-        // left: auto !important;
         top: auto;
-        // bottom: auto !important;
-        /*transform: translateY(-50%);
-        transform: translateX(-50%);*/
         left: 0% !important;
         bottom: -45px !important;
         width: 100% !important;
@@ -165,6 +184,6 @@
         opacity: 1;
         background: #fd3838;
         width: 30px;
-        box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+        // box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
     }
 }

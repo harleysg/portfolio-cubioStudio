@@ -2,9 +2,6 @@
 
 .c- {
     &btn {
-        --client-color: var(--color-c);
-        --client-color_light: var(--color-a);
-        --modal-border-size: 2px;
         position: relative;
         display: inline-flex;
         justify-content: center;
@@ -25,7 +22,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            @include bgGradient(var(--client-color_light), var(--client-color), var(--modal-border-size));
+            @include bgGradient(var(--color-a), var(--color-c), var(--modal-border-size));
         }
         &[data-position='absolute'] {
             position: absolute;
