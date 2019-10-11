@@ -141,6 +141,26 @@ html {
     transition: transform 0.5s cubic-bezier(0.37, 0.01, 0, 0.98);
 }
 
+.on-index {
+    #enfoque {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+        }
+
+        &:before {
+            background-image: url(images/index/index_impulsamos_bg.png);
+            background-size: auto;
+            background-position: center 30%;
+        }
+    }
+}
+
 .on-orca {
     .o-menu {
         max-width: 600px;

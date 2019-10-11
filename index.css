@@ -390,6 +390,12 @@ strong, b { font-family: var(--font-bold); }
 
 .on-hover { -webkit-transform: translateY(-10px) !important; -ms-transform: translateY(-10px) !important; transform: translateY(-10px) !important; -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); transition: -webkit-transform 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); -o-transition: transform 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); transition: transform 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); transition: transform 0.5s cubic-bezier(0.37, 0.01, 0, 0.98), -webkit-transform 0.5s cubic-bezier(0.37, 0.01, 0, 0.98); }
 
+.on-index #enfoque { position: relative; }
+
+.on-index #enfoque::before { content: ''; position: absolute; top: 0; width: 100%; height: 100%; background-repeat: no-repeat; }
+
+.on-index #enfoque:before { background-image: url(images/index/index_impulsamos_bg.png); background-size: auto; background-position: center 30%; }
+
 .on-orca .o-menu { max-width: 600px; }
 
 .on-orca #welcome .cont-multimedia { margin-top: 100px; }
