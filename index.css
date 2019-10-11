@@ -346,7 +346,7 @@ strong, b { font-family: var(--font-bold); }
 /* ---------------------------------- */
 .o-section[data-theme='gold'], html[data-theme='gold'] { --theme-section-bg: var(--color-a); --theme-headding-enfasis: var(--color-w); --theme-headding-separador: var(--color-w); --theme-card-before-border-bg: var(--color-c); --theme-mega-headding-color: #f4c82a; --theme-mega-headding-shadow: 30, 30, 30; --theme-header-bg: rgba(244, 200, 42, 0.5); --theme-menu-link-color: var(--color-1); }
 
-.o-section[data-theme='light'], html[data-theme='light'] { --theme-section-bg: var(--color-w); --theme-headding-enfasis: var(--color-a); --theme-headding-separador: var(--color-a); --theme-mega-headding-color: var(--color-w); --theme-mega-headding-shadow: 0, 0, 0; --theme-card-content-bg: var(--color-w); --theme-card-before-border-bg: var(--color-a); }
+.o-section[data-theme='light'], html[data-theme='light'] { --theme-section-bg: var(--color-w); --theme-headding-enfasis: var(--color-a); --theme-headding-separador: var(--color-a); --theme-mega-headding-color: var(--color-w); --theme-mega-headding-shadow: 0, 0, 0; --theme-card-content-bg: var(--color-w); --theme-card-before-border-bg: var(--color-a); --theme-headding-indicator: var(--color-1); }
 
 .o-section[data-theme='gray'], html[data-theme='gray'] { --theme-section-bg: var(--color-0); --theme-headding-enfasis: var(--color-a); --theme-headding-separador: var(--color-a); --theme-card-content-bg: var(--color-a); }
 
@@ -481,6 +481,44 @@ strong, b { font-family: var(--font-bold); }
 .on-valientes .o-section img { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; }
 
 .on-valientes .o-section:first-of-type .o-wrapper { margin-top: 18vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.on-origen .o-menu { max-width: 600px; }
+
+.on-origen #welcome .cont-multimedia { margin-top: 100px; }
+
+.on-origen #record { min-height: 75vh; }
+
+.on-origen #proposal { position: relative; }
+
+.on-origen #proposal img { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.on-origen #proposal:before { content: ''; position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; top: 0; }
+
+.on-origen #proposal:before { background-image: url(images/projects/origen/origen_propuesta_bg.png); background-size: auto 66%; background-position: 110% 10%; }
+
+.on-origen #colors { position: relative; }
+
+.on-origen #colors:before { content: ''; position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(images/projects/origen/origen_colores_bg.png); background-size: auto; background-position: center; }
+
+.on-origen #referentes { position: relative; }
+
+.on-origen #referentes:before { content: ''; position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(images/projects/origen/origen_referentes_bg.png); background-size: auto; background-position: center 80%; }
+
+.on-origen #elements { position: relative; }
+
+.on-origen #elements::before, .on-origen #elements::after { content: ''; position: absolute; top: 0; width: 100%; height: 100%; background-repeat: no-repeat; }
+
+.on-origen #elements:before { background-image: url(images/projects/origen/origen_elementos_bg.png); background-size: auto; background-position: center 120%; }
+
+.on-origen #elements:after { background-image: url(images/projects/origen/origen_elementos_bg_2.png); background-size: auto; background-position: center 30%; }
+
+.on-origen #aplicaciones { position: relative; }
+
+.on-origen #aplicaciones:before { content: ''; position: absolute; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(images/projects/origen/origen_aplicaciones_bg.png); background-size: auto; background-position: center 80%; }
+
+.on-origen .o-section img { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; }
+
+.on-origen .o-section:first-of-type .o-wrapper { margin-top: 18vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 @-webkit-keyframes animateSize { to { width: 85vw;
     height: 85vh; } }
