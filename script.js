@@ -261,18 +261,20 @@ document.addEventListener(
         let scrollSize = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         const header = js_o_header;
-        // isElmOnViewport(
-        //     '.js-scrollUp',
-        //     (baz) => {
-        //         // baz.elmTop <= baz.wh && baz.el.classList.add('on-hover');
-        //         // isAnyPartOfElementInViewport;
-        //     },
-        //     0.85
-        // );
+        //    isElmOnViewport(
+        //        '.blog-slider',
+        //        (baz) => {
+        //            console.log('TCL: baz', baz);
+        //            //    baz.elmTop <= baz.wh && baz.el.classList.add('on-hover');
+        //            //    isAnyPartOfElementInViewport;
+        //        },
+        //        0.85
+        //    );
 
         isHeaderOverThemeElm(scrollSize, ['[data-theme="gold"]', '[data-theme="gray"]', '[data-theme="light"]', '[data-theme="dark"]']);
 
-        // let themeGoldIsVisible = isAnyPartOfElementInViewport(document.querySelector('[data-theme="gold"]'));
+        // let themeGoldIsVisible = isAnyPartOfElementInViewport(document.querySelector('.blog-slider'));
+        // console.log('TCL: themeGoldIsVisible', themeGoldIsVisible);
         scrollSize >= windowHeight / 3 ? header.classList.add('is-scrolled') : header.classList.remove('is-scrolled');
 
         setTimeout(() => {
@@ -293,9 +295,10 @@ function sgParallax(stringElms) {
         let win_w = window.innerWidth;
         let d_h = document.body.offsetHeight;
         [...slides].map((slide, i) => {
-            let p = slides[i];
-            let top = scrt + p.getBoundingClientRect().top;
-            let h = p.clientHeight || p.offsetHeight || p.scrollHeight;
+            let p = slide;
+            let elm = slide;
+            let top = scrt + elm.getBoundingClientRect().top;
+            let h = elm.clientHeight || elm.offsetHeight || elm.scrollHeight;
             let x = i % 2 ? '-15%' : '15%';
 
             // Selector Inner Elements
@@ -340,7 +343,7 @@ function setIntersectionTo(DOMElmString, thold = 0, callback = () => {}) {
         const options = {
             threshold: thold,
         };
-        const fn = (entries, observer) => {
+        const fn = (entries) => {
             const data = [...entries][0];
             const { isIntersecting: onViewport, target, intersectionRect: rect } = data;
             const { top, height } = rect;
@@ -354,6 +357,10 @@ function setIntersectionTo(DOMElmString, thold = 0, callback = () => {}) {
         };
         const intObserver = new IntersectionObserver(fn, options);
 
-        document.querySelectorAll(DOMElmString).forEach((elm, i) => intObserver.observe(elm));
+        document.querySelectorAll(DOMElmString).forEach((elm, i) => {
+            const isVisible = isAnyPartOfElementInViewport(elm);
+            isVisible ? delete elm.dataset.view : (elm.dataset.view = 'fade-outDown');
+            intObserver.observe(elm);
+        });
     }
 }

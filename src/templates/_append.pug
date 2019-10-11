@@ -1,2 +1,24 @@
 
 script(src="./script.js")
+script.
+    document.addEventListener('DOMContentLoaded', () => {
+        setIntersectionTo('.js-intersector', 0.3, (response) => {
+            const {status, target} = response;
+            switch (status) {
+                case 'fadeInDown':
+                    target.dataset.view = 'fade-inDown';
+                    break;
+                case 'fadeInUp':
+                    target.dataset.view = 'fade-inUp';
+                    break;
+                case 'fadeOutDown':
+                    target.dataset.view = 'fade-outDown';
+                    break;
+                case 'fadeOutUp':
+                    target.dataset.view = 'fade-outUp';
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
