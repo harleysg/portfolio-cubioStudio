@@ -49,7 +49,7 @@
       </header>
       <section class="o-section" data-theme="gray" id="welcome">
         <div class="o-wrapper">
-          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator"></small>
+          <h1 class="c-section_headding js-intersector in-up"><small class="c-section_headding-indicator"></small>
             <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Proyecto</span> orca
           </h1>
           <blockquote class="c-welcome_message">
@@ -71,7 +71,7 @@
       <section class="o-section" data-theme="gray" id="record">
         <div class="o-wrapper">
           <div class="cont-multimedia">
-            <div class="c-multimedia" data-square="multimedia" data-shadow="true">
+            <div class="c-multimedia js-intersector" data-square="multimedia" data-shadow="true">
               <video class="c-multimedia_video" controls="controls" poster="./images/projects/slider/1.jpg">
                 <source src="multimedia/videos/orca/reel.mp4" type="video/mp4"/>Your browser does not support the video element.
               </video>
@@ -81,47 +81,47 @@
       </section>
       <section class="o-section" data-theme="light" id="preview">
         <div class="o-wrapper">
-          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Inicio,  lo que nos trajo aquí.</small>
+          <h1 class="c-section_headding js-intersector in-out"><small class="c-section_headding-indicator">Inicio,  lo que nos trajo aquí.</small>
             <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Sobre</span> proyecto orca.
           </h1>
         </div>
-        <div class="o-wrapper"><img src="images/projects/orca/orca_preview.png" alt=""/></div>
+        <div class="o-wrapper"><img class="js-intersector hk-image-layout" src="images/projects/orca/orca_preview.png" alt="" draggable="false"/></div>
       </section>
       <section class="o-section" data-theme="gold" id="proposal">
         <div class="o-wrapper">
-          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Horizonte, lo que quisimos lograr.</small>
+          <h1 class="c-section_headding js-intersector in-out"><small class="c-section_headding-indicator">Horizonte, lo que quisimos lograr.</small>
             <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Propuesta</span> de marca.
           </h1>
         </div>
-        <div class="o-wrapper"><img src="images/projects/orca/orca_proposal.png" alt=""/></div>
+        <div class="o-wrapper"><img class="js-intersector hk-image-layout" src="images/projects/orca/orca_proposal.png" alt="" draggable="false"/></div>
       </section>
       <section class="o-section" data-theme="gray" id="objectives">
         <div class="o-wrapper">
-          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Norte, objetivos a cumplir.</small>
+          <h1 class="c-section_headding js-intersector in-out"><small class="c-section_headding-indicator">Norte, objetivos a cumplir.</small>
             <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Proposito</span> rebranding.
           </h1>
         </div>
-        <div class="o-wrapper"><img src="images/projects/orca/orca_proposito_rebranding.png" alt="" draggable="false"/></div>
+        <div class="o-wrapper"><img class="js-intersector hk-image-layout" src="images/projects/orca/orca_proposito_rebranding.png" alt="" draggable="false"/></div>
       </section>
       <section class="o-section" data-theme="light" id="isotipo">
         <div class="o-wrapper">
-          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Aspectos visuales.</small>
+          <h1 class="c-section_headding js-intersector"><small class="c-section_headding-indicator">Aspectos visuales.</small>
             <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Abstracción</span> 
           </h1>
         </div>
-        <div class="o-wrapper"><img src="images/projects/orca/orca_isotipo.png" alt="" draggable="false"/></div>
+        <div class="o-wrapper"><img class="js-intersector hk-image-layout" src="images/projects/orca/orca_isotipo.png" alt="" draggable="false"/></div>
       </section>
       <section class="o-section" data-theme="dark" id="tipografia">
         <div class="o-wrapper">
-          <h1 class="c-section_headding js-scrollUp"><small class="c-section_headding-indicator">Aspectos visuales.</small>
+          <h1 class="c-section_headding js-intersector"><small class="c-section_headding-indicator">Aspectos visuales.</small>
             <div class="c-section_headding-separador"></div><span class="c-section_headding-enfasis">Tipografía</span> 
           </h1>
         </div>
-        <div class="o-wrapper"><img src="images/projects/orca/orca_tipografia.png" alt="" draggable="false"/></div>
+        <div class="o-wrapper"><img class="js-intersector hk-image-layout" src="images/projects/orca/orca_tipografia.png" alt="" draggable="false"/></div>
       </section>
       <section class="o-section js-scrollUp" id="contact" data-theme="light">
         <div class="o-wrapper">
-          <h2 class="u-head_section" data-name="Contacto">Contacto</h2>
+          <h2 class="u-head_section js-intersector" data-name="Contacto" draggable="false">Contacto</h2>
         </div>
         <div class="o-wrapper" style="margin-top: 200px">
           <div class="c-contact" data-square="multimedia">
@@ -174,5 +174,28 @@
     <div class="mouse-tracker"></div>
     
     <script src="./script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          setIntersectionTo('.js-intersector', 0.3, (response) => {
+              const {status, target} = response;
+              switch (status) {
+                  case 'fadeInDown':
+                      target.dataset.view = 'fade-inDown';
+                      break;
+                  case 'fadeInUp':
+                      target.dataset.view = 'fade-inUp';
+                      break;
+                  case 'fadeOutDown':
+                      target.dataset.view = 'fade-outDown';
+                      break;
+                  case 'fadeOutUp':
+                      target.dataset.view = 'fade-outUp';
+                      break;
+                  default:
+                      break;
+              }
+          });
+      });
+    </script>
   </body>
 </html>
