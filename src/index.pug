@@ -25,17 +25,48 @@ html(lang="en")
             |
         div(class="mouse-tracker")
         |
-        |
         include ./templates/_append
+        |
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js")
         script.
+
+            setIntersectionTo('.js-intersector', 0.3, (response) => {
+                //- console.log(response);
+                const {status, target} = response;
+                switch (status) {
+                    case 'fadeInDown':
+                        target.dataset.view = 'fade-inDown';
+                        break;
+                    case 'fadeInUp':
+                        target.dataset.view = 'fade-inUp';
+                        break;
+                    case 'fadeOutDown':
+                        target.dataset.view = 'fade-outDown';
+                        break;
+                    case 'fadeOutUp':
+                        target.dataset.view = 'fade-outUp';
+                        break;
+                    default:
+                        break;
+                }
+                //- status == 'fadeInDown' && (target.dataset.view = 'fade-inDown') // 1
+                //- status == 'fadeInUp' && (target.dataset.view = 'fade-inUp')
+                //- status == 'fadeOutDown' && (target.dataset.view = 'fade-outDown') // 2
+                //- status == 'fadeOutUp' && (target.dataset.view = 'fade-outUp')
+            });
             document.addEventListener('DOMContentLoaded', () => {
+
+
                 var swiper = new Swiper('.blog-slider', {
                     spaceBetween: 90,
                     effect: 'fade',
                     loop: true,
                     mousewheel: false,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
                     autoplay: {
                         delay: 10000,
                         disableOnInteraction: false,

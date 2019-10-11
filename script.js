@@ -261,14 +261,14 @@ document.addEventListener(
         let scrollSize = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
         const header = js_o_header;
-        isElmOnViewport(
-            '.js-scrollUp',
-            (baz) => {
-                // baz.elmTop <= baz.wh && baz.el.classList.add('on-hover');
-                // isAnyPartOfElementInViewport;
-            },
-            0.85
-        );
+        // isElmOnViewport(
+        //     '.js-scrollUp',
+        //     (baz) => {
+        //         // baz.elmTop <= baz.wh && baz.el.classList.add('on-hover');
+        //         // isAnyPartOfElementInViewport;
+        //     },
+        //     0.85
+        // );
 
         isHeaderOverThemeElm(scrollSize, ['[data-theme="gold"]', '[data-theme="gray"]', '[data-theme="light"]', '[data-theme="dark"]']);
 
@@ -334,3 +334,26 @@ function sgParallax(stringElms) {
 }
 
 sgParallax(document.querySelectorAll('.js-scrollUp'));
+
+function setIntersectionTo(DOMElmString, thold = 0, callback = () => {}) {
+    if (DOMElmString) {
+        const options = {
+            threshold: thold,
+        };
+        const fn = (entries, observer) => {
+            const data = [...entries][0];
+            const { isIntersecting: onViewport, target, intersectionRect: rect } = data;
+            const { top, height } = rect;
+            if (onViewport) {
+                top >= height && callback({ target, status: 'fadeInDown' });
+                top <= height && callback({ target, status: 'fadeInUp' });
+            } else {
+                top >= height && callback({ target, status: 'fadeOutDown' });
+                top <= height && callback({ target, status: 'fadeOutUp' });
+            }
+        };
+        const intObserver = new IntersectionObserver(fn, options);
+
+        document.querySelectorAll(DOMElmString).forEach((elm, i) => intObserver.observe(elm));
+    }
+}
