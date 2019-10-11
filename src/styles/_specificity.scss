@@ -315,3 +315,101 @@ html {
         }
     }
 }
+
+.on-valientes {
+    .o-menu {
+        max-width: 600px;
+    }
+    #welcome {
+        .cont-multimedia {
+            margin-top: 100px;
+        }
+    }
+    #record {
+        min-height: 75vh;
+    }
+    #proposal {
+        position: relative;
+        img {
+            display: flex;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(images/projects/valientes/valientes_marca_logo.png);
+            background-size: auto 58%;
+            background-repeat: no-repeat;
+            background-position: 80% center;
+            // opacity: 0.8;
+        }
+    }
+    #colores {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-image: url(images/projects/orca/orca_proposito_bg.png);
+            background-size: auto 36%;
+            background-position: 50% center;
+            opacity: 0;
+        }
+    }
+    #referentes {
+        position: relative;
+        background-image: linear-gradient(180deg, var(--color-0) 140px, transparent 140px, transparent);
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-image: url(images/projects/valientes/valientes_referentes_bg.png);
+            background-size: contain;
+            background-position: 0 center;
+        }
+    }
+    #elements {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-image: url(images/projects/valientes/valientes_elementos_bg.png);
+            background-size: auto;
+            background-position: 60% 70%;
+        }
+    }
+    #aplicaciones {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-image: url(images/projects/valientes/valientes_aplicaciones_bg.png);
+            background-size: auto 60%;
+            background-position: center;
+        }
+    }
+    .o-section {
+        img {
+            user-select: none;
+            pointer-events: none;
+        }
+        &:first-of-type {
+            .o-wrapper {
+                margin-top: 18vh;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
