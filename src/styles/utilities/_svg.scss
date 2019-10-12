@@ -9,5 +9,6 @@
 .svg-logo {
     .st0 {
         fill: var(--theme-svg-logo-fill); //#222220;
+        transition: fill 100ms cubic-bezier(0.37, 0.01, 0, 0.98);
     }
 }
