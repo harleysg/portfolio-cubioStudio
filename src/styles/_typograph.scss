@@ -9,14 +9,14 @@
     font-style: bold;
     font-weight: 700;
     font-display: swap;
-    src: local('AvenirNext-Bold'), local('AvenirNext-Bold'), url('./fonts/AvenirNext-DemiBold-03.ttf') format('truetype');
+    src: local('AvenirNext-Bold'), local('AvenirNext-Bold'), url('./assets/fonts/AvenirNext-DemiBold-03.ttf') format('truetype');
 }
 @font-face {
     font-family: 'AvenirNext-Medium';
     font-style: bold;
     font-weight: 700;
     font-display: swap;
-    src: local('AvenirNext-Medium'), local('AvenirNext-Medium'), url('./fonts/AvenirNext-Medium-06.ttf') format('truetype');
+    src: local('AvenirNext-Medium'), local('AvenirNext-Medium'), url('./assets/fonts/AvenirNext-Medium-06.ttf') format('truetype');
 }
 /* latin */
 @font-face {
@@ -24,5 +24,5 @@
     font-style: bold;
     font-weight: 700;
     font-display: swap;
-    src: local('Avenir Next'), local('Avenir Next'), url('./fonts/AvenirNext-Regular-08.ttf') format('truetype');
+    src: local('Avenir Next'), local('Avenir Next'), url('./assets/fonts/AvenirNext-Regular-08.ttf') format('truetype');
 }
