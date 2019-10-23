@@ -1,8 +1,8 @@
-const configPath = {
+const setting = {
     src: 'src/',
     dist: './',
-    message: 'update: compilación modo #build:all al',
+    message: 'update: compilación modo #build',
     branch: 'master',
 };
 
-module.exports = configPath;
+module.exports = setting;

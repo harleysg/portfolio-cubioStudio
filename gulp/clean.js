@@ -1,7 +1,5 @@
 module.exports = function() {
     $.gulp.task('clean', function() {
-        return $.del(
-            `${$.path.pathConfig.folderPublic}${$.path.pathConfig.folderOva}/dist`
-        );
+        return $.del([`${$.path.dist}*.{html,css,map}`, `${$.path.dist}script.js`]);
     });
 };

@@ -49,23 +49,18 @@ const _cssnano = cssnano({
     zindex: false,
     // preset: ['default', {} ]
 });
-const stylesPATH = {
-    inputOva: `${$.path.pathConfig.folderPublic}${$.path.pathConfig.folderOva}/src/index.scss`,
-    outputOva: `${$.path.pathConfig.folderPublic}${$.path.pathConfig.folderOva}/dist`,
-    inputMain: `${$.path.pathConfig.folderApp}/styles/index.scss`,
-    outputMain: `./dist`,
-};
 
 module.exports = function() {
-    $.gulp.task('stylesOva:dev', () => {
+    $.gulp.task('scss:dev', () => {
         return $.gulp
-            .src(stylesPATH.inputOva)
+            .src(`${$.path.src}styles/index.scss`)
             .pipe(plumber())
             .pipe(sourcemaps.init())
-            .pipe(scss({ style: 'compressed' }).on('error', $.path.interceptErrors))
+            .pipe(scss({ style: 'compressed' }).on('error', $.hasError))
             .pipe(postcss([_cssnano]))
+            .pipe(rename({ basename: 'index' }))
             .pipe(sourcemaps.write('.'))
-            .pipe($.gulp.dest(stylesPATH.outputOva))
+            .pipe($.gulp.dest($.path.dist))
             .pipe(
                 $.browser.reload({
                     stream: true,
@@ -73,45 +68,14 @@ module.exports = function() {
             );
     });
 
-    $.gulp.task('stylesOva:build', () => {
+    $.gulp.task('scss:build', () => {
         return $.gulp
-            .src(stylesPATH.inputOva)
+            .src(`${$.path.src}styles/index.scss`)
             .pipe(scss())
             .pipe(postcss([_cssnano]))
             .pipe(csscomb())
-            .pipe($.gulp.dest(stylesPATH.outputOva))
-            .pipe(
-                $.browser.reload({
-                    stream: true,
-                })
-            );
-    });
-
-    $.gulp.task('stylesMain:dev', () => {
-        return $.gulp
-            .src(stylesPATH.inputMain)
-            .pipe(plumber())
-            .pipe(sourcemaps.init())
-            .pipe(scss({ style: 'compressed' }).on('error', $.path.interceptErrors))
-            .pipe(postcss([_cssnano]))
-            .pipe(rename({ basename: 'core' }))
-            .pipe(sourcemaps.write('.'))
-            .pipe($.gulp.dest(stylesPATH.outputMain))
-            .pipe(
-                $.browser.reload({
-                    stream: true,
-                })
-            );
-    });
-
-    $.gulp.task('stylesMain:build', () => {
-        return $.gulp
-            .src(stylesPATH.inputMain)
-            .pipe(scss())
-            .pipe(postcss([_cssnano]))
-            .pipe(csscomb())
-            .pipe(rename({ basename: 'core' }))
-            .pipe($.gulp.dest(stylesPATH.outputOva))
+            .pipe(rename({ basename: 'index' }))
+            .pipe($.gulp.dest($.path.dist))
             .pipe(
                 $.browser.reload({
                     stream: true,

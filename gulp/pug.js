@@ -9,14 +9,14 @@ const plumber = require('gulp-plumber');
 module.exports = function() {
     $.gulp.task('pug', () => {
         return $.gulp
-            .src(`${$.path.src}/*.pug`, {
+            .src(`${$.path.src}*.pug`, {
                 since: $.gulp.lastRun('pug'),
             })
             .pipe(changed('dist', { extension: '.html' }))
             .pipe(gulpif(global.isWatching, cached('pug')))
             .pipe(
                 pugInheritance({
-                    basedir: `${$.path.src}/src`,
+                    basedir: `${$.path.src}`,
                     skip: 'node_modules',
                 })
             )
@@ -25,14 +25,13 @@ module.exports = function() {
                     return !/\/_/.test(file.path) && !/^_/.test(file.relative);
                 })
             )
-
             .pipe(
                 pug({
-                    pretty: false,
-                }).on('error', $.path.interceptErrors)
+                    pretty: true,
+                }).on('error', $.hasError)
             )
             .pipe(plumber.stop())
-            .pipe($.gulp.dest(`${$.path.src}/dist`))
+            .pipe($.gulp.dest($.path.dist))
             .on('end', $.browser.reload);
     });
 };
