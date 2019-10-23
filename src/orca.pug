@@ -1,34 +1,34 @@
-include ./templates/_mixin
+include ./views/shared/_mixin
 <!DOCTYPE html>
 html(lang="en")
     block config
         -var mainClass = 'on-orca'
         -var data = 'Proyecto Orca'
         -var menu = [ {"link": './', "text": 'inicio'},  {"link": '#preview', "text": 'marca'}, {"link": '#proposal', "text": 'propuesta'}, {"link": '#objectives', "text": 'objetivos'}, {"link": '#isotipo', "text": 'abstracción'}, {"link": '#contact', "text": 'contacto'}]
-        include ./templates/_head
+        include ./views/shared/_head
     body
         main(id="app" class="o-main"+' '+mainClass)
-            include ./templates/_header
+            include ./views/shared/_header
             |
-            include ./templates/orca/_welcome
+            include ./views/templates/orca/_welcome
             |
-            include ./templates/orca/_record
+            include ./views/templates/orca/_record
             |
-            include ./templates/orca/_preview
+            include ./views/templates/orca/_preview
             |
-            include ./templates/orca/_proposal
+            include ./views/templates/orca/_proposal
             |
-            include ./templates/orca/_objectives
+            include ./views/templates/orca/_objectives
             |
-            include ./templates/orca/_isotipo
+            include ./views/templates/orca/_isotipo
             |
-            include ./templates/orca/_tipografia
+            include ./views/templates/orca/_tipografia
             |
-            include ./templates/orca/_contact
+            include ./views/templates/orca/_contact
             |
-            include ./templates/_footer
+            include ./views/shared/_footer
             |
         div(class="mouse-tracker")
         |
         |
-        include ./templates/_append
+        include ./views/shared/_append

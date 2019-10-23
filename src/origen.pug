@@ -1,36 +1,36 @@
-include ./templates/_mixin
+include ./views/shared/_mixin
 <!DOCTYPE html>
 html(lang="en")
     block config
         -var mainClass = 'on-origen'
         -var data = 'Proyecto Orca'
         -var menu = [ {"link": './', "text": 'inicio'},  {"link": '#preview', "text": 'marca'}, {"link": '#proposal', "text": 'propuesta'}, {"link": '#objectives', "text": 'objetivos'}, {"link": '#isotipo', "text": 'abstracción'}, {"link": '#contact', "text": 'contacto'}]
-        include ./templates/_head
+        include ./views/shared/_head
     body
         main(id="app" class="o-main"+' '+mainClass)
-            include ./templates/_header
+            include ./views/shared/_header
             |
-            include ./templates/origen/_welcome
+            include ./views/templates/origen/_welcome
             |
-            include ./templates/origen/_record
+            include ./views/templates/origen/_record
             //- |
-            //- include ./templates/origen/_preview
+            //- include ./views/templates/origen/_preview
             |
-            include ./templates/origen/_proposal
+            include ./views/templates/origen/_proposal
             |
-            include ./templates/origen/_colors
+            include ./views/templates/origen/_colors
             |
-            include ./templates/origen/_referentes
+            include ./views/templates/origen/_referentes
             |
-            include ./templates/origen/_elements
+            include ./views/templates/origen/_elements
             |
-            include ./templates/origen/_aplicaciones
+            include ./views/templates/origen/_aplicaciones
             |
-            include ./templates/origen/_contact
+            include ./views/templates/origen/_contact
             |
-            include ./templates/_footer
+            include ./views/shared/_footer
             |
         div(class="mouse-tracker")
         |
         |
-        include ./templates/_append
+        include ./views/shared/_append
