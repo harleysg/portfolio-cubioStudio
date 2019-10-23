@@ -1,0 +1,64 @@
+{
+  "name": "portfolio-cubiostudio",
+  "version": "1.0.0",
+  "description": "portfolio cubio studio",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "develop": "gulp develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarleySG/portfolio-cubioStudio.git"
+  },
+  "keywords": [
+    "cubio",
+    "studio",
+    "portfolio",
+    "harleysg"
+  ],
+  "author": "Harley Santos Garzón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarleySG/portfolio-cubioStudio/issues"
+  },
+  "homepage": "https://github.com/HarleySG/portfolio-cubioStudio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "babel-core": "7.0.0-bridge.0",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.10",
+    "del": "^3.0.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-babel-minify": "^0.5.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-filter": "^5.1.0",
+    "gulp-folders-4x": "^1.0.1",
+    "gulp-git": "^2.9.0",
+    "gulp-header": "2.0.5",
+    "gulp-if": "^2.0.2",
+    "gulp-imports": "^0.0.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-prompt": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-pug-inheritance": "^0.2.1",
+    "gulp-rename": "1.4.0",
+    "gulp-replace": "1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "jshint": "^2.10.2",
+    "jshint-stylish": "^2.2.1",
+    "path": "^0.12.7"
+  }
+}
