@@ -1,0 +1,15 @@
+{
+    "passfail": true,
+    "strict": false,
+    "indent": 2,
+    "maxparams": 20,
+    "unused": false,
+    "loopfunc": true,
+    "curly": true,
+    "laxcomma": true,
+    "laxbreak": true,
+    "jquery": true,
+    "lastsemic": false,
+    "esversion": 9,
+    "expr": true
+}
